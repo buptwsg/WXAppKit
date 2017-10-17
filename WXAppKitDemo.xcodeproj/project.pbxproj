@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = B24B9C131F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h */; };
+		B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B24B9C141F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m */; };
+		B24B9C191F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = B24B9C171F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h */; };
+		B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B24B9C181F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m */; };
 		C62352A31F94CD3600E608AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C62352A21F94CD3600E608AC /* AppDelegate.m */; };
 		C62352A61F94CD3600E608AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62352A51F94CD3600E608AC /* ViewController.m */; };
 		C62352A91F94CD3600E608AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62352A71F94CD3600E608AC /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B24B9C131F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+WXLogUnicodeSupport.h"; sourceTree = "<group>"; };
+		B24B9C141F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WXLogUnicodeSupport.m"; sourceTree = "<group>"; };
+		B24B9C171F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WXLogUnicodeSupport.h"; sourceTree = "<group>"; };
+		B24B9C181F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WXLogUnicodeSupport.m"; sourceTree = "<group>"; };
 		C623529E1F94CD3600E608AC /* WXAppKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXAppKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62352A11F94CD3600E608AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C62352A21F94CD3600E608AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -150,6 +158,8 @@
 		C63058FC1F9615FD00D3B9E1 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				B24B9C171F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h */,
+				B24B9C181F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -157,6 +167,8 @@
 		C63058FD1F9615FD00D3B9E1 /* NSArray */ = {
 			isa = PBXGroup;
 			children = (
+				B24B9C131F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h */,
+				B24B9C141F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m */,
 			);
 			path = NSArray;
 			sourceTree = "<group>";
@@ -182,7 +194,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24B9C191F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h in Headers */,
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
+				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */,
+				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
