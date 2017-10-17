@@ -16,6 +16,7 @@
 		C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C62352BE1F94CD5600E608AC /* WXAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C62352C31F94CD5600E608AC /* WXAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62352BC1F94CD5600E608AC /* WXAppKit.framework */; };
 		C62352C41F94CD5600E608AC /* WXAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C62352BC1F94CD5600E608AC /* WXAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C63058FA1F9613DA00D3B9E1 /* CaseExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63058F81F9613DA00D3B9E1 /* CaseExploreViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,9 @@
 		C62352BC1F94CD5600E608AC /* WXAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WXAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62352BE1F94CD5600E608AC /* WXAppKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXAppKit.h; sourceTree = "<group>"; };
 		C62352BF1F94CD5600E608AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C63058F71F9613DA00D3B9E1 /* TypeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeDefine.h; sourceTree = "<group>"; };
+		C63058F81F9613DA00D3B9E1 /* CaseExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaseExploreViewController.m; sourceTree = "<group>"; };
+		C63058F91F9613DA00D3B9E1 /* CaseExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaseExploreViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,9 @@
 		C62352A01F94CD3600E608AC /* WXAppKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C63058F91F9613DA00D3B9E1 /* CaseExploreViewController.h */,
+				C63058F81F9613DA00D3B9E1 /* CaseExploreViewController.m */,
+				C63058F71F9613DA00D3B9E1 /* TypeDefine.h */,
 				C62352A11F94CD3600E608AC /* AppDelegate.h */,
 				C62352A21F94CD3600E608AC /* AppDelegate.m */,
 				C62352A41F94CD3600E608AC /* ViewController.h */,
@@ -124,8 +131,48 @@
 		C62352C91F94CD9D00E608AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C63058FD1F9615FD00D3B9E1 /* NSArray */,
+				C63058FC1F9615FD00D3B9E1 /* NSDictionary */,
+				C63058FF1F9615FD00D3B9E1 /* UIDevice */,
+				C63058FE1F9615FD00D3B9E1 /* UILabel */,
+				C63058FB1F9615FD00D3B9E1 /* UIView */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C63058FB1F9615FD00D3B9E1 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		C63058FC1F9615FD00D3B9E1 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		C63058FD1F9615FD00D3B9E1 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		C63058FE1F9615FD00D3B9E1 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		C63058FF1F9615FD00D3B9E1 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIDevice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C63058FA1F9613DA00D3B9E1 /* CaseExploreViewController.m in Sources */,
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
 				C62352B11F94CD3600E608AC /* main.m in Sources */,
 				C62352A31F94CD3600E608AC /* AppDelegate.m in Sources */,
@@ -395,6 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WXAppKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buptwsg.WXAppKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -408,6 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WXAppKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buptwsg.WXAppKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
