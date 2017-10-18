@@ -23,6 +23,7 @@
 		C63058FA1F9613DA00D3B9E1 /* CaseExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63058F81F9613DA00D3B9E1 /* CaseExploreViewController.m */; };
 		C63059061F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63059051F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.m */; };
 		C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63059081F96F1FD00D3B9E1 /* ExtentionsTestViewController.m */; };
+		C630590C1F96FF1C00D3B9E1 /* NSDictionaryExtentionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C630590B1F96FF1C00D3B9E1 /* NSDictionaryExtentionsTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		C63059051F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSArrayExtentionsTestViewController.m; sourceTree = "<group>"; };
 		C63059071F96F1FD00D3B9E1 /* ExtentionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtentionsTestViewController.h; sourceTree = "<group>"; };
 		C63059081F96F1FD00D3B9E1 /* ExtentionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtentionsTestViewController.m; sourceTree = "<group>"; };
+		C630590A1F96FF1C00D3B9E1 /* NSDictionaryExtentionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSDictionaryExtentionsTestViewController.h; sourceTree = "<group>"; };
+		C630590B1F96FF1C00D3B9E1 /* NSDictionaryExtentionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryExtentionsTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +228,8 @@
 		C63059031F96ED9400D3B9E1 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				C630590A1F96FF1C00D3B9E1 /* NSDictionaryExtentionsTestViewController.h */,
+				C630590B1F96FF1C00D3B9E1 /* NSDictionaryExtentionsTestViewController.m */,
 			);
 			path = NSDictionary;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
 				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,
 				C62352B11F94CD3600E608AC /* main.m in Sources */,
+				C630590C1F96FF1C00D3B9E1 /* NSDictionaryExtentionsTestViewController.m in Sources */,
 				C62352A31F94CD3600E608AC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

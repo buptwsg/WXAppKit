@@ -8,6 +8,7 @@
 
 #import "ExtentionsTestViewController.h"
 #import "NSArrayExtentionsTestViewController.h"
+#import "NSDictionaryExtentionsTestViewController.h"
 
 @interface ExtentionsTestViewController ()
 
@@ -51,6 +52,12 @@
     switch (indexPath.row) {
         case 0: {
             UIViewController *vc = [[NSArrayExtentionsTestViewController alloc] init];
+            [self.navigationController pushViewController: vc animated: YES];
+            break;
+        }
+            
+        case 1: {
+            UIViewController *vc = [[NSDictionaryExtentionsTestViewController alloc] init];
             [self.navigationController pushViewController: vc animated: YES];
             break;
         }
