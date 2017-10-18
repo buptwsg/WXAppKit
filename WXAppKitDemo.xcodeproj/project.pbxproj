@@ -21,6 +21,8 @@
 		C62352C31F94CD5600E608AC /* WXAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62352BC1F94CD5600E608AC /* WXAppKit.framework */; };
 		C62352C41F94CD5600E608AC /* WXAppKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C62352BC1F94CD5600E608AC /* WXAppKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C63058FA1F9613DA00D3B9E1 /* CaseExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63058F81F9613DA00D3B9E1 /* CaseExploreViewController.m */; };
+		C63059061F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63059051F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.m */; };
+		C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63059081F96F1FD00D3B9E1 /* ExtentionsTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,10 @@
 		C63058F71F9613DA00D3B9E1 /* TypeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeDefine.h; sourceTree = "<group>"; };
 		C63058F81F9613DA00D3B9E1 /* CaseExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaseExploreViewController.m; sourceTree = "<group>"; };
 		C63058F91F9613DA00D3B9E1 /* CaseExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaseExploreViewController.h; sourceTree = "<group>"; };
+		C63059041F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSArrayExtentionsTestViewController.h; sourceTree = "<group>"; };
+		C63059051F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSArrayExtentionsTestViewController.m; sourceTree = "<group>"; };
+		C63059071F96F1FD00D3B9E1 /* ExtentionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtentionsTestViewController.h; sourceTree = "<group>"; };
+		C63059081F96F1FD00D3B9E1 /* ExtentionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtentionsTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 		C62352A01F94CD3600E608AC /* WXAppKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C63059001F96ED9400D3B9E1 /* Tests */,
 				C63058F91F9613DA00D3B9E1 /* CaseExploreViewController.h */,
 				C63058F81F9613DA00D3B9E1 /* CaseExploreViewController.m */,
 				C63058F71F9613DA00D3B9E1 /* TypeDefine.h */,
@@ -185,6 +192,41 @@
 			children = (
 			);
 			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		C63059001F96ED9400D3B9E1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C63059011F96ED9400D3B9E1 /* Extensions */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		C63059011F96ED9400D3B9E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C63059021F96ED9400D3B9E1 /* NSArray */,
+				C63059031F96ED9400D3B9E1 /* NSDictionary */,
+				C63059071F96F1FD00D3B9E1 /* ExtentionsTestViewController.h */,
+				C63059081F96F1FD00D3B9E1 /* ExtentionsTestViewController.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C63059021F96ED9400D3B9E1 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				C63059041F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.h */,
+				C63059051F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		C63059031F96ED9400D3B9E1 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSDictionary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +346,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C63058FA1F9613DA00D3B9E1 /* CaseExploreViewController.m in Sources */,
+				C63059061F96EDE500D3B9E1 /* NSArrayExtentionsTestViewController.m in Sources */,
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
+				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,
 				C62352B11F94CD3600E608AC /* main.m in Sources */,
 				C62352A31F94CD3600E608AC /* AppDelegate.m in Sources */,
 			);

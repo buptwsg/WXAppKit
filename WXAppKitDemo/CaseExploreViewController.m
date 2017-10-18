@@ -13,7 +13,11 @@
 @property (nonatomic) NSInteger caseIndex;
 @property (nonatomic, strong) UIButton *prevButton;
 @property (nonatomic, strong) UIButton *nextButton;
+@property (nonatomic, strong) UIButton *runButton;
+
 @property (nonatomic, strong) UILabel *caseNameLabel;
+
+@property (nonatomic, strong) NSArray<UIView*> *excludeViews;
 
 @end
 
@@ -43,6 +47,14 @@
     [self.prevButton sizeToFit];
     self.prevButton.center = CGPointMake(12 + self.prevButton.bounds.size.width/2, self.view.bounds.size.height - 50);
     
+    self.runButton = [[UIButton alloc] init];
+    [self.view addSubview: self.runButton];
+    [self.runButton setTitleColor: [UIColor blueColor] forState: UIControlStateNormal];
+    [self.runButton setTitle: @"运行" forState: UIControlStateNormal];
+    [self.runButton addTarget: self action: @selector(runCase) forControlEvents: UIControlEventTouchUpInside];
+    [self.runButton sizeToFit];
+    self.runButton.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height - 50);
+    
     self.caseNameLabel = [[UILabel alloc] init];
     self.caseNameLabel.font = [UIFont systemFontOfSize: 20];
     self.caseNameLabel.textColor = [UIColor blackColor];
@@ -50,7 +62,7 @@
     [self.view addSubview: self.caseNameLabel];
     self.caseNameLabel.frame = CGRectMake(0, 10+64, self.view.bounds.size.width, 30);
     
-    [self loadCaseAtIndex: self.caseIndex];
+    self.excludeViews = @[self.prevButton, self.nextButton, self.runButton, self.caseNameLabel];
     [self updateButtonStatus];
 }
 
@@ -73,10 +85,17 @@
     [self updateButtonStatus];
 }
 
+- (void)runCase {
+    [self doClear];
+    [self loadCaseAtIndex: self.caseIndex];
+}
+
 - (void)doClear {
     NSArray<UIView*> *subviews = [self.view subviews];
     [subviews enumerateObjectsUsingBlock:^(UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [obj removeFromSuperview];
+        if (![self.excludeViews containsObject: obj]) {
+            [obj removeFromSuperview];
+        }
     }];
 }
 

@@ -1,26 +1,28 @@
 //
-//  ViewController.m
+//  ExtentionsTestViewController.m
 //  WXAppKitDemo
 //
-//  Created by sulirong on 2017/10/16.
+//  Created by sulirong on 2017/10/18.
 //  Copyright © 2017年 buptwsg. All rights reserved.
 //
 
-#import "ViewController.h"
 #import "ExtentionsTestViewController.h"
+#import "NSArrayExtentionsTestViewController.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ExtentionsTestViewController ()
 
-@property (strong, nonatomic) NSArray *testCases;
+@property (nonatomic, strong) NSArray<NSString*> *extensionList;
 
 @end
 
-@implementation ViewController
+@implementation ExtentionsTestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.testCases = @[@"Extensions Test"];
+    
+    self.title = @"Extentions Test";
+    self.extensionList = @[@"NSArray", @"NSDictionary"];
+    [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,17 +30,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view data source
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.testCases.count;
+    return self.extensionList.count;
 }
 
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"cell" forIndexPath: indexPath];
-    cell.textLabel.text = self.testCases[indexPath.row];
+    cell.textLabel.text = self.extensionList[indexPath.row];
     return cell;
 }
 
@@ -46,7 +50,7 @@
     [tableView deselectRowAtIndexPath: indexPath animated: YES];
     switch (indexPath.row) {
         case 0: {
-            UIViewController *vc = [[ExtentionsTestViewController alloc] init];
+            UIViewController *vc = [[NSArrayExtentionsTestViewController alloc] init];
             [self.navigationController pushViewController: vc animated: YES];
             break;
         }
@@ -55,4 +59,5 @@
             break;
     }
 }
+
 @end
