@@ -10,6 +10,10 @@
 
 @implementation NSDictionary (WXLogUnicodeSupport)
 
+/**
+ 当数组中的内容包含Unicode字符，如中文时，如果po或者是使用NSLog打印，看到的是Unicode编码值，很不友好。覆写下面的方法，可以解决此问题。
+ */
+
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
     NSMutableString *descString = [NSMutableString string];
     NSMutableString *tab = [NSMutableString stringWithString: @""];

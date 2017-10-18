@@ -10,6 +10,7 @@
 #import "NSArrayExtensionsTestViewController.h"
 #import "NSDictionaryExtensionsTestViewController.h"
 #import "UIDeviceExtensionsTestViewController.h"
+#import "UIColorExtensionsTestViewController.h"
 
 @interface ExtentionsTestViewController ()
 
@@ -23,7 +24,7 @@
     [super viewDidLoad];
     
     self.title = @"Extentions Test";
-    self.extensionList = @[@"NSArray", @"NSDictionary", @"UIDevice"];
+    self.extensionList = @[@"NSArray", @"NSDictionary", @"UIDevice", @"UIColor"];
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }
 
@@ -65,6 +66,12 @@
             
         case 2: {
             UIViewController *vc = [[UIDeviceExtensionsTestViewController alloc] init];
+            [self.navigationController pushViewController: vc animated: YES];
+            break;
+        }
+         
+        case 3: {
+            UIViewController *vc = [[UIColorExtensionsTestViewController alloc] init];
             [self.navigationController pushViewController: vc animated: YES];
             break;
         }

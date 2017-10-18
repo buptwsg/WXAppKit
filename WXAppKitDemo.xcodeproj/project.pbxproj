@@ -27,6 +27,9 @@
 		C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C630590D1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h */; };
 		C63059101F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C630590E1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.m */; };
 		C630592A1F972C2600D3B9E1 /* UIDeviceExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63059291F972C2600D3B9E1 /* UIDeviceExtensionsTestViewController.m */; };
+		C63059321F97467A00D3B9E1 /* UIColor+WXHex.h in Headers */ = {isa = PBXBuildFile; fileRef = C63059301F97467A00D3B9E1 /* UIColor+WXHex.h */; };
+		C63059331F97467A00D3B9E1 /* UIColor+WXHex.m in Sources */ = {isa = PBXBuildFile; fileRef = C63059311F97467A00D3B9E1 /* UIColor+WXHex.m */; };
+		C63059371F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C63059361F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,10 @@
 		C630590E1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+WXDeviceHelper.m"; sourceTree = "<group>"; };
 		C63059281F972C2600D3B9E1 /* UIDeviceExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIDeviceExtensionsTestViewController.h; sourceTree = "<group>"; };
 		C63059291F972C2600D3B9E1 /* UIDeviceExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIDeviceExtensionsTestViewController.m; sourceTree = "<group>"; };
+		C63059301F97467A00D3B9E1 /* UIColor+WXHex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+WXHex.h"; sourceTree = "<group>"; };
+		C63059311F97467A00D3B9E1 /* UIColor+WXHex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WXHex.m"; sourceTree = "<group>"; };
+		C63059351F9761A800D3B9E1 /* UIColorExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColorExtensionsTestViewController.h; sourceTree = "<group>"; };
+		C63059361F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColorExtensionsTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +163,7 @@
 		C62352C91F94CD9D00E608AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C630592B1F97460400D3B9E1 /* UIColor */,
 				C63058FD1F9615FD00D3B9E1 /* NSArray */,
 				C63058FC1F9615FD00D3B9E1 /* NSDictionary */,
 				C63058FF1F9615FD00D3B9E1 /* UIDevice */,
@@ -217,6 +225,7 @@
 		C63059011F96ED9400D3B9E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C63059341F97618F00D3B9E1 /* UIColor */,
 				C63059271F972BE300D3B9E1 /* UIDevice */,
 				C63059021F96ED9400D3B9E1 /* NSArray */,
 				C63059031F96ED9400D3B9E1 /* NSDictionary */,
@@ -253,6 +262,24 @@
 			path = UIDevice;
 			sourceTree = "<group>";
 		};
+		C630592B1F97460400D3B9E1 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C63059301F97467A00D3B9E1 /* UIColor+WXHex.h */,
+				C63059311F97467A00D3B9E1 /* UIColor+WXHex.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		C63059341F97618F00D3B9E1 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C63059351F9761A800D3B9E1 /* UIColorExtensionsTestViewController.h */,
+				C63059361F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -261,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B24B9C191F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h in Headers */,
+				C63059321F97467A00D3B9E1 /* UIColor+WXHex.h in Headers */,
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
@@ -374,6 +402,7 @@
 				C63059061F96EDE500D3B9E1 /* NSArrayExtensionsTestViewController.m in Sources */,
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
 				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,
+				C63059371F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m in Sources */,
 				C62352B11F94CD3600E608AC /* main.m in Sources */,
 				C630590C1F96FF1C00D3B9E1 /* NSDictionaryExtensionsTestViewController.m in Sources */,
 				C630592A1F972C2600D3B9E1 /* UIDeviceExtensionsTestViewController.m in Sources */,
@@ -387,6 +416,7 @@
 			files = (
 				C63059101F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.m in Sources */,
 				B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */,
+				C63059331F97467A00D3B9E1 /* UIColor+WXHex.m in Sources */,
 				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
