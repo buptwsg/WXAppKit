@@ -1,5 +1,5 @@
 //
-//  NSArrayExtentionsTestViewController.h
+//  UIDeviceExtensionsTestViewController.h
 //  WXAppKitDemo
 //
 //  Created by sulirong on 2017/10/18.
@@ -8,6 +8,6 @@
 
 #import "CaseExploreViewController.h"
 
-@interface NSArrayExtentionsTestViewController : CaseExploreViewController
+@interface UIDeviceExtensionsTestViewController : CaseExploreViewController
 
 @end

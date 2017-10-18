@@ -1,12 +1,12 @@
 //
-//  NSDictionaryExtentionsTestViewController.m
+//  NSArrayExtentionsTestViewController.m
 //  WXAppKitDemo
 //
 //  Created by sulirong on 2017/10/18.
 //  Copyright © 2017年 buptwsg. All rights reserved.
 //
 
-#import "NSDictionaryExtentionsTestViewController.h"
+#import "NSArrayExtensionsTestViewController.h"
 
 static void testLogUnicodeSupport(UIView *rootView) {
     UILabel *label = [[UILabel alloc] init];
@@ -16,19 +16,19 @@ static void testLogUnicodeSupport(UIView *rootView) {
     label.center = rootView.center;
     [rootView addSubview: label];
     
-    NSDictionary *temp = @{@"中" : @"国", @"美": @"女", @"帅" : @"哥", @"Array" : @[@"大", @"保", @"健", @{@"360" : @"就是奇虎啦"}]};
-    NSLog(@"temp dictionary is %@", temp);
+    NSArray *temp = @[@"中", @"国", @"人", @[@"美国", @"香蕉", @"人"]];
+    NSLog(@"temp array content is %@", temp);
 }
 
 static TestCase TestCases[] = {
     {"Log Unicode Support", testLogUnicodeSupport}
 };
 
-@interface NSDictionaryExtentionsTestViewController ()
+@interface NSArrayExtensionsTestViewController ()
 
 @end
 
-@implementation NSDictionaryExtentionsTestViewController
+@implementation NSArrayExtensionsTestViewController
 
 - (instancetype)init {
     self = [super init];
@@ -41,7 +41,6 @@ static TestCase TestCases[] = {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

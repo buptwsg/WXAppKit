@@ -7,8 +7,9 @@
 //
 
 #import "ExtentionsTestViewController.h"
-#import "NSArrayExtentionsTestViewController.h"
-#import "NSDictionaryExtentionsTestViewController.h"
+#import "NSArrayExtensionsTestViewController.h"
+#import "NSDictionaryExtensionsTestViewController.h"
+#import "UIDeviceExtensionsTestViewController.h"
 
 @interface ExtentionsTestViewController ()
 
@@ -22,7 +23,7 @@
     [super viewDidLoad];
     
     self.title = @"Extentions Test";
-    self.extensionList = @[@"NSArray", @"NSDictionary"];
+    self.extensionList = @[@"NSArray", @"NSDictionary", @"UIDevice"];
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }
 
@@ -51,13 +52,19 @@
     [tableView deselectRowAtIndexPath: indexPath animated: YES];
     switch (indexPath.row) {
         case 0: {
-            UIViewController *vc = [[NSArrayExtentionsTestViewController alloc] init];
+            UIViewController *vc = [[NSArrayExtensionsTestViewController alloc] init];
             [self.navigationController pushViewController: vc animated: YES];
             break;
         }
             
         case 1: {
-            UIViewController *vc = [[NSDictionaryExtentionsTestViewController alloc] init];
+            UIViewController *vc = [[NSDictionaryExtensionsTestViewController alloc] init];
+            [self.navigationController pushViewController: vc animated: YES];
+            break;
+        }
+            
+        case 2: {
+            UIViewController *vc = [[UIDeviceExtensionsTestViewController alloc] init];
             [self.navigationController pushViewController: vc animated: YES];
             break;
         }

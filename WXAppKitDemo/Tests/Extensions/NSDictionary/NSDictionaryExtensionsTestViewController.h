@@ -8,6 +8,6 @@
 
 #import "CaseExploreViewController.h"
 
-@interface NSDictionaryExtentionsTestViewController : CaseExploreViewController
+@interface NSDictionaryExtensionsTestViewController : CaseExploreViewController
 
 @end
