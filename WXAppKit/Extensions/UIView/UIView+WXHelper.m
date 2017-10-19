@@ -108,24 +108,24 @@
 
 - (CGFloat)scaleX {
     CGAffineTransform transform = self.transform;
-    return 0;
+    return sqrt(transform.a * transform.a + transform.c * transform.c);
 }
 
 - (void)setScaleX:(CGFloat)scaleX {
-    self.transform = CGAffineTransformMakeScale(scaleX, 1);
+    self.transform = CGAffineTransformMakeScale(scaleX, self.scaleY);
 }
 
 - (CGFloat)scaleY {
     CGAffineTransform transform = self.transform;
-    return 0;
+    return sqrt(transform.b * transform.b + transform.d * transform.d);
 }
 
 - (void)setScaleY:(CGFloat)scaleY {
-    self.transform = CGAffineTransformMakeScale(1, scaleY);
+    self.transform = CGAffineTransformMakeScale(self.scaleX, scaleY);
 }
 
 - (CGPoint)scale {
-    return CGPointMake(1, 1);
+    return CGPointMake(self.scaleX, self.scaleY);
 }
 
 - (void)setScale:(CGPoint)scale {
@@ -133,7 +133,10 @@
 }
 
 - (CGFloat)rotation {
-    return 0;
+    float fAngle = atan2f(self.transform.b, self.transform.a);
+    //convert the angle to degrees
+    fAngle = fAngle * (180 / M_PI);
+    return fAngle;
 }
 
 - (void)setRotation:(CGFloat)rotation {

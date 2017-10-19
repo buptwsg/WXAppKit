@@ -13,6 +13,7 @@
 		B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B24B9C181F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m */; };
 		B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B281D2B81F980C2D0004B70A /* UIView+WXHelper.h */; };
 		B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */; };
+		B29AEC461F9905310082FE93 /* UIViewExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */; };
 		C62352A31F94CD3600E608AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C62352A21F94CD3600E608AC /* AppDelegate.m */; };
 		C62352A61F94CD3600E608AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62352A51F94CD3600E608AC /* ViewController.m */; };
 		C62352A91F94CD3600E608AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62352A71F94CD3600E608AC /* Main.storyboard */; };
@@ -67,6 +68,8 @@
 		B24B9C181F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WXLogUnicodeSupport.m"; sourceTree = "<group>"; };
 		B281D2B81F980C2D0004B70A /* UIView+WXHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXHelper.h"; sourceTree = "<group>"; };
 		B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXHelper.m"; sourceTree = "<group>"; };
+		B29AEC441F9905310082FE93 /* UIViewExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewExtensionsTestViewController.h; sourceTree = "<group>"; };
+		B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewExtensionsTestViewController.m; sourceTree = "<group>"; };
 		C623529E1F94CD3600E608AC /* WXAppKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXAppKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62352A11F94CD3600E608AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C62352A21F94CD3600E608AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B29AEC431F9905160082FE93 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				B29AEC441F9905310082FE93 /* UIViewExtensionsTestViewController.h */,
+				B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		C62352951F94CD3600E608AC = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +249,7 @@
 		C63059011F96ED9400D3B9E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B29AEC431F9905160082FE93 /* UIView */,
 				C63059341F97618F00D3B9E1 /* UIColor */,
 				C63059271F972BE300D3B9E1 /* UIDevice */,
 				C63059021F96ED9400D3B9E1 /* NSArray */,
@@ -413,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C63058FA1F9613DA00D3B9E1 /* CaseExploreViewController.m in Sources */,
+				B29AEC461F9905310082FE93 /* UIViewExtensionsTestViewController.m in Sources */,
 				C63059061F96EDE500D3B9E1 /* NSArrayExtensionsTestViewController.m in Sources */,
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
 				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,

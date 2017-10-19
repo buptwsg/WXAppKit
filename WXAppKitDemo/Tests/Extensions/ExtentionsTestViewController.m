@@ -11,10 +11,12 @@
 #import "NSDictionaryExtensionsTestViewController.h"
 #import "UIDeviceExtensionsTestViewController.h"
 #import "UIColorExtensionsTestViewController.h"
+#import "UIViewExtensionsTestViewController.h"
 
 @interface ExtentionsTestViewController ()
 
 @property (nonatomic, strong) NSArray<NSString*> *extensionList;
+@property (nonatomic, strong) NSArray<Class> *testClasses;
 
 @end
 
@@ -24,7 +26,14 @@
     [super viewDidLoad];
     
     self.title = @"Extentions Test";
-    self.extensionList = @[@"NSArray", @"NSDictionary", @"UIDevice", @"UIColor"];
+    self.extensionList = @[@"NSArray", @"NSDictionary", @"UIDevice", @"UIColor", @"UIView"];
+    self.testClasses = @[
+                         [NSArrayExtensionsTestViewController class],
+                         [NSDictionaryExtensionsTestViewController class],
+                         [UIDeviceExtensionsTestViewController class],
+                         [UIColorExtensionsTestViewController class],
+                         [UIViewExtensionsTestViewController class]
+                         ];
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }
 
@@ -51,34 +60,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath: indexPath animated: YES];
-    switch (indexPath.row) {
-        case 0: {
-            UIViewController *vc = [[NSArrayExtensionsTestViewController alloc] init];
-            [self.navigationController pushViewController: vc animated: YES];
-            break;
-        }
-            
-        case 1: {
-            UIViewController *vc = [[NSDictionaryExtensionsTestViewController alloc] init];
-            [self.navigationController pushViewController: vc animated: YES];
-            break;
-        }
-            
-        case 2: {
-            UIViewController *vc = [[UIDeviceExtensionsTestViewController alloc] init];
-            [self.navigationController pushViewController: vc animated: YES];
-            break;
-        }
-         
-        case 3: {
-            UIViewController *vc = [[UIColorExtensionsTestViewController alloc] init];
-            [self.navigationController pushViewController: vc animated: YES];
-            break;
-        }
-            
-        default:
-            break;
-    }
+    UIViewController *vc = [[self.testClasses[indexPath.row] alloc] init];
+    [self.navigationController pushViewController: vc animated: YES];
 }
 
 @end

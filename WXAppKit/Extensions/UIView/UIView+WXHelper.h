@@ -80,8 +80,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) CGFloat rotation;
 
-//Flip a view?
-
 /**
  A handy method to get the view's view controller instance.
  */
