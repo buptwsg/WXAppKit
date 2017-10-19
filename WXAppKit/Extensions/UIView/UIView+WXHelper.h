@@ -72,6 +72,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) CGSize  size;
 
+@property (nonatomic) CGFloat scaleX;
+
+@property (nonatomic) CGFloat scaleY;
+
+@property (nonatomic) CGPoint scale;
+
+@property (nonatomic) CGFloat rotation;
+
+//Flip a view?
+
 /**
  A handy method to get the view's view controller instance.
  */

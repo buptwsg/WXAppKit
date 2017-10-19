@@ -106,6 +106,40 @@
     self.frame = frame;
 }
 
+- (CGFloat)scaleX {
+    CGAffineTransform transform = self.transform;
+    return 0;
+}
+
+- (void)setScaleX:(CGFloat)scaleX {
+    self.transform = CGAffineTransformMakeScale(scaleX, 1);
+}
+
+- (CGFloat)scaleY {
+    CGAffineTransform transform = self.transform;
+    return 0;
+}
+
+- (void)setScaleY:(CGFloat)scaleY {
+    self.transform = CGAffineTransformMakeScale(1, scaleY);
+}
+
+- (CGPoint)scale {
+    return CGPointMake(1, 1);
+}
+
+- (void)setScale:(CGPoint)scale {
+    self.transform = CGAffineTransformMakeScale(scale.x, scale.y);
+}
+
+- (CGFloat)rotation {
+    return 0;
+}
+
+- (void)setRotation:(CGFloat)rotation {
+    self.transform = CGAffineTransformMakeRotation(rotation / 180 * M_PI);
+}
+
 - (nullable UIViewController*)wx_viewController {
     for (UIView *view = self; view; view = self.superview) {
         UIResponder *responder = [view nextResponder];
