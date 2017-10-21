@@ -72,12 +72,24 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) CGSize  size;
 
+/**
+ Scale a view horizontally
+ */
 @property (nonatomic) CGFloat scaleX;
 
+/**
+ Scale a view vertically
+ */
 @property (nonatomic) CGFloat scaleY;
 
+/**
+ Scale a view both horizontally and vertically
+ */
 @property (nonatomic) CGPoint scale;
 
+/**
+ Rotate a view by degree
+ */
 @property (nonatomic) CGFloat rotation;
 
 /**
