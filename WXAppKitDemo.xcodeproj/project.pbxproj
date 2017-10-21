@@ -14,6 +14,12 @@
 		B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B281D2B81F980C2D0004B70A /* UIView+WXHelper.h */; };
 		B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */; };
 		B29AEC461F9905310082FE93 /* UIViewExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */; };
+		B2AD65811F9B66F800526185 /* NSAttributedString+WXHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AD657F1F9B66F800526185 /* NSAttributedString+WXHeight.h */; };
+		B2AD65821F9B66F800526185 /* NSAttributedString+WXHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD65801F9B66F800526185 /* NSAttributedString+WXHeight.m */; };
+		B2AD65851F9B671C00526185 /* NSString+WXHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AD65831F9B671C00526185 /* NSString+WXHeight.h */; };
+		B2AD65861F9B671C00526185 /* NSString+WXHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD65841F9B671C00526185 /* NSString+WXHeight.m */; };
+		B2AD658B1F9B89DF00526185 /* NSStringExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD658A1F9B89DF00526185 /* NSStringExtensionsTestViewController.m */; };
+		B2AD658E1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD658D1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m */; };
 		C62352A31F94CD3600E608AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C62352A21F94CD3600E608AC /* AppDelegate.m */; };
 		C62352A61F94CD3600E608AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62352A51F94CD3600E608AC /* ViewController.m */; };
 		C62352A91F94CD3600E608AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62352A71F94CD3600E608AC /* Main.storyboard */; };
@@ -70,6 +76,14 @@
 		B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXHelper.m"; sourceTree = "<group>"; };
 		B29AEC441F9905310082FE93 /* UIViewExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewExtensionsTestViewController.h; sourceTree = "<group>"; };
 		B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewExtensionsTestViewController.m; sourceTree = "<group>"; };
+		B2AD657F1F9B66F800526185 /* NSAttributedString+WXHeight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+WXHeight.h"; sourceTree = "<group>"; };
+		B2AD65801F9B66F800526185 /* NSAttributedString+WXHeight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+WXHeight.m"; sourceTree = "<group>"; };
+		B2AD65831F9B671C00526185 /* NSString+WXHeight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+WXHeight.h"; sourceTree = "<group>"; };
+		B2AD65841F9B671C00526185 /* NSString+WXHeight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+WXHeight.m"; sourceTree = "<group>"; };
+		B2AD65891F9B89DF00526185 /* NSStringExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStringExtensionsTestViewController.h; sourceTree = "<group>"; };
+		B2AD658A1F9B89DF00526185 /* NSStringExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringExtensionsTestViewController.m; sourceTree = "<group>"; };
+		B2AD658C1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringExtensionsTestViewController.h; sourceTree = "<group>"; };
+		B2AD658D1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAttributedStringExtensionsTestViewController.m; sourceTree = "<group>"; };
 		C623529E1F94CD3600E608AC /* WXAppKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXAppKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62352A11F94CD3600E608AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C62352A21F94CD3600E608AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,6 +146,42 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		B2AD657D1F9B66BE00526185 /* NSAttributeString */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD657F1F9B66F800526185 /* NSAttributedString+WXHeight.h */,
+				B2AD65801F9B66F800526185 /* NSAttributedString+WXHeight.m */,
+			);
+			path = NSAttributeString;
+			sourceTree = "<group>";
+		};
+		B2AD657E1F9B66BF00526185 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD65831F9B671C00526185 /* NSString+WXHeight.h */,
+				B2AD65841F9B671C00526185 /* NSString+WXHeight.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		B2AD65871F9B89C200526185 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD65891F9B89DF00526185 /* NSStringExtensionsTestViewController.h */,
+				B2AD658A1F9B89DF00526185 /* NSStringExtensionsTestViewController.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		B2AD65881F9B89C200526185 /* NSAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD658C1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.h */,
+				B2AD658D1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m */,
+			);
+			path = NSAttributedString;
+			sourceTree = "<group>";
+		};
 		C62352951F94CD3600E608AC = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +233,8 @@
 		C62352C91F94CD9D00E608AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B2AD657D1F9B66BE00526185 /* NSAttributeString */,
+				B2AD657E1F9B66BF00526185 /* NSString */,
 				C630592B1F97460400D3B9E1 /* UIColor */,
 				C63058FD1F9615FD00D3B9E1 /* NSArray */,
 				C63058FC1F9615FD00D3B9E1 /* NSDictionary */,
@@ -249,6 +301,8 @@
 		C63059011F96ED9400D3B9E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B2AD65881F9B89C200526185 /* NSAttributedString */,
+				B2AD65871F9B89C200526185 /* NSString */,
 				B29AEC431F9905160082FE93 /* UIView */,
 				C63059341F97618F00D3B9E1 /* UIColor */,
 				C63059271F972BE300D3B9E1 /* UIDevice */,
@@ -318,7 +372,9 @@
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
 				B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */,
+				B2AD65811F9B66F800526185 /* NSAttributedString+WXHeight.h in Headers */,
 				C630593E1F976BC500D3B9E1 /* UIView+WXAutoResizingMaskLayout.h in Headers */,
+				B2AD65851F9B671C00526185 /* NSString+WXHeight.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +483,9 @@
 			files = (
 				C63058FA1F9613DA00D3B9E1 /* CaseExploreViewController.m in Sources */,
 				B29AEC461F9905310082FE93 /* UIViewExtensionsTestViewController.m in Sources */,
+				B2AD658E1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m in Sources */,
 				C63059061F96EDE500D3B9E1 /* NSArrayExtensionsTestViewController.m in Sources */,
+				B2AD658B1F9B89DF00526185 /* NSStringExtensionsTestViewController.m in Sources */,
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
 				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,
 				C63059371F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m in Sources */,
@@ -442,6 +500,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2AD65821F9B66F800526185 /* NSAttributedString+WXHeight.m in Sources */,
+				B2AD65861F9B671C00526185 /* NSString+WXHeight.m in Sources */,
 				C63059101F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.m in Sources */,
 				C630593F1F976BC500D3B9E1 /* UIView+WXAutoResizingMaskLayout.m in Sources */,
 				B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */,
@@ -590,7 +650,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UX84S3N9CU;
+				DEVELOPMENT_TEAM = D3S9N3K2MW;
 				INFOPLIST_FILE = WXAppKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -605,7 +665,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UX84S3N9CU;
+				DEVELOPMENT_TEAM = D3S9N3K2MW;
 				INFOPLIST_FILE = WXAppKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

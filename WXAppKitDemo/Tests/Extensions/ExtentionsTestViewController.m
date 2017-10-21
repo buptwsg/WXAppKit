@@ -12,6 +12,8 @@
 #import "UIDeviceExtensionsTestViewController.h"
 #import "UIColorExtensionsTestViewController.h"
 #import "UIViewExtensionsTestViewController.h"
+#import "NSAttributedStringExtensionsTestViewController.h"
+#import "NSStringExtensionsTestViewController.h"
 
 @interface ExtentionsTestViewController ()
 
@@ -26,13 +28,15 @@
     [super viewDidLoad];
     
     self.title = @"Extentions Test";
-    self.extensionList = @[@"NSArray", @"NSDictionary", @"UIDevice", @"UIColor", @"UIView"];
+    self.extensionList = @[@"NSArray", @"NSDictionary", @"UIDevice", @"UIColor", @"UIView", @"NSAttributedString", @"NSString"];
     self.testClasses = @[
                          [NSArrayExtensionsTestViewController class],
                          [NSDictionaryExtensionsTestViewController class],
                          [UIDeviceExtensionsTestViewController class],
                          [UIColorExtensionsTestViewController class],
-                         [UIViewExtensionsTestViewController class]
+                         [UIViewExtensionsTestViewController class],
+                         [NSAttributedStringExtensionsTestViewController class],
+                         [NSStringExtensionsTestViewController class]
                          ];
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }
