@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B24974391F9C1D56009951B7 /* WXPageControl.h */; };
+		B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B249743A1F9C1D56009951B7 /* WXPageControl.m */; };
+		B249743F1F9C1D72009951B7 /* WXTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = B249743D1F9C1D72009951B7 /* WXTabBar.h */; };
+		B24974401F9C1D72009951B7 /* WXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B249743E1F9C1D72009951B7 /* WXTabBar.m */; };
+		B24974431F9C1D82009951B7 /* WXTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = B24974411F9C1D82009951B7 /* WXTextField.h */; };
+		B24974441F9C1D82009951B7 /* WXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = B24974421F9C1D82009951B7 /* WXTextField.m */; };
 		B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = B24B9C131F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h */; };
 		B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B24B9C141F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m */; };
 		B24B9C191F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = B24B9C171F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h */; };
@@ -68,6 +74,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B24974391F9C1D56009951B7 /* WXPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXPageControl.h; sourceTree = "<group>"; };
+		B249743A1F9C1D56009951B7 /* WXPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXPageControl.m; sourceTree = "<group>"; };
+		B249743D1F9C1D72009951B7 /* WXTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTabBar.h; sourceTree = "<group>"; };
+		B249743E1F9C1D72009951B7 /* WXTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTabBar.m; sourceTree = "<group>"; };
+		B24974411F9C1D82009951B7 /* WXTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTextField.h; sourceTree = "<group>"; };
+		B24974421F9C1D82009951B7 /* WXTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTextField.m; sourceTree = "<group>"; };
 		B24B9C131F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+WXLogUnicodeSupport.h"; sourceTree = "<group>"; };
 		B24B9C141F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WXLogUnicodeSupport.m"; sourceTree = "<group>"; };
 		B24B9C171F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WXLogUnicodeSupport.h"; sourceTree = "<group>"; };
@@ -137,6 +149,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B24974351F9C1D3E009951B7 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				B24974361F9C1D3E009951B7 /* PageControl */,
+				B24974371F9C1D3E009951B7 /* TabBar */,
+				B24974381F9C1D3E009951B7 /* TextField */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		B24974361F9C1D3E009951B7 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				B24974391F9C1D56009951B7 /* WXPageControl.h */,
+				B249743A1F9C1D56009951B7 /* WXPageControl.m */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		B24974371F9C1D3E009951B7 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B249743D1F9C1D72009951B7 /* WXTabBar.h */,
+				B249743E1F9C1D72009951B7 /* WXTabBar.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		B24974381F9C1D3E009951B7 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				B24974411F9C1D82009951B7 /* WXTextField.h */,
+				B24974421F9C1D82009951B7 /* WXTextField.m */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		B29AEC431F9905160082FE93 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +272,7 @@
 		C62352BD1F94CD5600E608AC /* WXAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				B24974351F9C1D3E009951B7 /* CustomUI */,
 				C62352C91F94CD9D00E608AC /* Extensions */,
 				C62352BE1F94CD5600E608AC /* WXAppKit.h */,
 				C62352BF1F94CD5600E608AC /* Info.plist */,
@@ -368,6 +418,8 @@
 			files = (
 				B24B9C191F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h in Headers */,
 				C63059321F97467A00D3B9E1 /* UIColor+WXHex.h in Headers */,
+				B249743F1F9C1D72009951B7 /* WXTabBar.h in Headers */,
+				B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */,
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
@@ -375,6 +427,7 @@
 				B2AD65811F9B66F800526185 /* NSAttributedString+WXHeight.h in Headers */,
 				C630593E1F976BC500D3B9E1 /* UIView+WXAutoResizingMaskLayout.h in Headers */,
 				B2AD65851F9B671C00526185 /* NSString+WXHeight.h in Headers */,
+				B24974431F9C1D82009951B7 /* WXTextField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,11 +555,14 @@
 			files = (
 				B2AD65821F9B66F800526185 /* NSAttributedString+WXHeight.m in Sources */,
 				B2AD65861F9B671C00526185 /* NSString+WXHeight.m in Sources */,
+				B24974441F9C1D82009951B7 /* WXTextField.m in Sources */,
 				C63059101F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.m in Sources */,
 				C630593F1F976BC500D3B9E1 /* UIView+WXAutoResizingMaskLayout.m in Sources */,
 				B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */,
 				B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */,
+				B24974401F9C1D72009951B7 /* WXTabBar.m in Sources */,
 				C63059331F97467A00D3B9E1 /* UIColor+WXHex.m in Sources */,
+				B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */,
 				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
