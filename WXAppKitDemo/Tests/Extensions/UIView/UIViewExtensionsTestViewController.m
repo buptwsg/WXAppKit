@@ -136,7 +136,18 @@ static void testViewController(UIView *rootView) {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         UIViewController *test = view.wx_viewController;
         NSLog(@"test = %@, test.navigationController = %@, rootVC.navigationController = %@", test, test.navigationController, rootVC.navigationController);
+        [test.view removeFromSuperview];
+        [test removeFromParentViewController];
     });
+}
+
+static void testIsPortrait(UIView *rootView) {
+    if (rootView.isPortrait) {
+        NSLog(@"now UI is portrait");
+    }
+    else {
+        NSLog(@"now UI is landscape");
+    }
 }
 
 static TestCase cases[] = {
@@ -149,7 +160,8 @@ static TestCase cases[] = {
     {"Test frame set size", testFrameSetSize},
     {"Test Scale", testScale},
     {"Test Rotation", testRotation},
-    {"Test View Controller", testViewController}
+    {"Test View Controller", testViewController},
+    {"Test isPortrait", testIsPortrait}
 };
 
 @interface UIViewExtensionsTestViewController ()

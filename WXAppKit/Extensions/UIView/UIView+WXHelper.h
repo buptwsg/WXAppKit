@@ -93,6 +93,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) CGFloat rotation;
 
 /**
+ Judge whether UI orientation is portrait
+ */
+@property (nonatomic, readonly) BOOL isPortrait;
+
+/**
  A handy method to get the view's view controller instance.
  */
 @property (nullable, nonatomic, readonly) UIViewController *wx_viewController;

@@ -37,6 +37,7 @@
     [self.nextButton addTarget: self action: @selector(nextCase) forControlEvents: UIControlEventTouchUpInside];
     [self.nextButton sizeToFit];
     self.nextButton.center = CGPointMake(self.view.bounds.size.width - 12 - self.nextButton.bounds.size.width/2, self.view.bounds.size.height - 50);
+    self.nextButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
     
     self.prevButton = [[UIButton alloc] init];
     self.prevButton.adjustsImageWhenDisabled = YES;
@@ -46,6 +47,7 @@
     [self.prevButton addTarget: self action: @selector(prevCase) forControlEvents: UIControlEventTouchUpInside];
     [self.prevButton sizeToFit];
     self.prevButton.center = CGPointMake(12 + self.prevButton.bounds.size.width/2, self.view.bounds.size.height - 50);
+    self.prevButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
     
     self.runButton = [[UIButton alloc] init];
     [self.view addSubview: self.runButton];
@@ -54,6 +56,7 @@
     [self.runButton addTarget: self action: @selector(runCase) forControlEvents: UIControlEventTouchUpInside];
     [self.runButton sizeToFit];
     self.runButton.center = CGPointMake(self.view.bounds.size.width / 2, self.view.bounds.size.height - 50);
+    self.runButton.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     
     self.caseNameLabel = [[UILabel alloc] init];
     self.caseNameLabel.font = [UIFont systemFontOfSize: 20];
@@ -61,6 +64,7 @@
     self.caseNameLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview: self.caseNameLabel];
     self.caseNameLabel.frame = CGRectMake(0, 10+64, self.view.bounds.size.width, 30);
+    self.caseNameLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
     self.excludeViews = @[self.prevButton, self.nextButton, self.runButton, self.caseNameLabel];
     [self updateButtonStatus];

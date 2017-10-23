@@ -143,6 +143,15 @@
     self.transform = CGAffineTransformMakeRotation(rotation / 180 * M_PI);
 }
 
+- (BOOL)isPortrait {
+    if (nil == self.window) {
+        return YES;
+    }
+    
+    CGSize windowSize = self.window.size;
+    return windowSize.width < windowSize.height;
+}
+
 - (nullable UIViewController*)wx_viewController {
     for (UIView *view = self; view; view = self.superview) {
         UIResponder *responder = [view nextResponder];
