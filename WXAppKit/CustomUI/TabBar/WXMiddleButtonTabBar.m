@@ -41,6 +41,16 @@ static UIColor *_selectedTextColor = nil;
 
 - (void)didAddSubview:(UIView *)subview {
     NSLog(@"subview %@ is added", subview);
+    if ([subview isKindOfClass: NSClassFromString(@"UITabBarButton")]) {
+        for (UIView *view in subview.subviews) {
+            if ([view isKindOfClass: [UIButton class]]) {
+                [_mutableButtonsArray addObject: view];
+            }
+            else if ([view isKindOfClass: [UILabel class]]) {
+                [_mutableLabelsArray addObject: view];
+            }
+        }
+    }
 }
 
 - (void)layoutSubviews {
@@ -71,20 +81,20 @@ static UIColor *_selectedTextColor = nil;
     [self bringSubviewToFront: self.middleButton];
 }
 
-//重写hitTest方法, 去监听发布按钮的点击, 目的是为了让凸出的部分也能响应点击事件
+//重写hitTest方法, 去监听中间按钮的点击, 目的是为了让凸出的部分也能响应点击事件
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event{
-    //这是一个判断的关键, 不判断的话push到其他页面, 点击发布按钮的位置也是会有反应的, 这样就不好了
+    //这是一个判断的关键, 不判断的话push到其他页面, 点击中间按钮的位置也是会有反应的, 这样就不好了
     //self.isHidden == NO 说明当前页面是有tabbar的，那么肯定是在导航控制器的根控制器页面
-    //在导航控制器根控制器页面，那么我们就需要判断手指点击的位置是否在发布按钮身上
-    //是的话让发布按钮自己处理点击事件，不是的话让系统去处理点击事件就可以了
+    //在导航控制器根控制器页面，那么我们就需要判断手指点击的位置是否在中间按钮身上
+    //是的话让中间按钮自己处理点击事件，不是的话让系统去处理点击事件就可以了
     if (!self.isHidden) {
-        //将当前tabbar的触摸点转换坐标系，转换到发布按钮的身上，生成一个新的点
+        //将当前tabbar的触摸点转换坐标系，转换到中间按钮的身上，生成一个新的点
         CGPoint newPoint = [self convertPoint:point toView: self.middleButton];
-        //判断如果这个新的点是在发布按钮身上，那么处理点击事件最合适的view就是发布按钮
-        if ( [self.middleButton pointInside: newPoint withEvent: event]) {
+        //判断如果这个新的点是在中间按钮身上，那么处理点击事件最合适的view就是发布按钮
+        if ([self.middleButton pointInside: newPoint withEvent: event]) {
             return self.middleButton;
         }
-        else {//如果点不在发布按钮身上，直接让系统处理就可以了
+        else {//如果点不在中间按钮身上，直接让系统处理就可以了
             return [super hitTest: point withEvent: event];
         }
     }
@@ -134,7 +144,14 @@ static UIColor *_selectedTextColor = nil;
     _mutableButtonsArray = [NSMutableArray array];
     _mutableLabelsArray = [NSMutableArray array];
     
-    UITabBarItem *tabBarItem = [UITabBarItem appearanceWhenContainedIn: [self class], nil];
+    UITabBarItem *tabBarItem = nil;
+    if ([UITabBarItem respondsToSelector: @selector(appearanceWhenContainedInInstancesOfClasses:)]) {
+        tabBarItem = [UITabBarItem appearanceWhenContainedInInstancesOfClasses: @[[self class]]];
+    }
+    else {
+        tabBarItem = [UITabBarItem appearanceWhenContainedIn: [self class], nil];
+    }
+    
     UIColor *normalColor = self.class.normalTextColor;
     if (normalColor) {
         NSDictionary *normalAttributes = @{NSForegroundColorAttributeName : normalColor};
