@@ -1,31 +1,30 @@
 //
-//  ViewController.m
+//  CustomUITestsViewController.m
 //  WXAppKitDemo
 //
-//  Created by sulirong on 2017/10/16.
+//  Created by Shuguang Wang on 2017/10/27.
 //  Copyright © 2017年 buptwsg. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "ExtentionsTestViewController.h"
 #import "CustomUITestsViewController.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CustomUITestsViewController ()
 
-@property (strong, nonatomic) NSArray *testCases;
-@property (strong, nonatomic) NSArray<Class> *testClasses;
+@property (nonatomic, strong) NSArray<NSString*> *customUIList;
+@property (nonatomic, strong) NSArray<Class> *testClasses;
+
 @end
 
-@implementation ViewController
+@implementation CustomUITestsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.testCases = @[@"Extensions Test", @"CustomUI Test"];
+    
+    self.title = @"Extentions Test";
+    self.customUIList = @[@"Middle Button TabBar"];
     self.testClasses = @[
-                         [ExtentionsTestViewController class],
-                         [CustomUITestsViewController class]
                          ];
+    [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,17 +32,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.testCases.count;
+    return self.customUIList.count;
 }
 
-- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"cell" forIndexPath: indexPath];
-    cell.textLabel.text = self.testCases[indexPath.row];
+    cell.textLabel.text = self.customUIList[indexPath.row];
     return cell;
 }
 
@@ -52,4 +52,5 @@
     UIViewController *vc = [[self.testClasses[indexPath.row] alloc] init];
     [self.navigationController pushViewController: vc animated: YES];
 }
+
 @end

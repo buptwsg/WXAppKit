@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WXMiddleButtonTabBar.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface WXMiddleButtonTabBarController : UITabBarController
 
+@property (nonatomic, readonly) WXMiddleButtonTabBar *middleButtonTabBar;
+
+- (void)addChildViewController:(nonnull UIViewController *)childController title: (nonnull NSString*)title image: (nonnull NSString*)imageName selectedImage: (nullable NSString*)selectedImageName;
+
 @end
+
+NS_ASSUME_NONNULL_END

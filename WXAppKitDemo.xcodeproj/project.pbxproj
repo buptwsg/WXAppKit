@@ -17,6 +17,8 @@
 		B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B24B9C141F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m */; };
 		B24B9C191F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = B24B9C171F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h */; };
 		B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B24B9C181F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m */; };
+		B27C94001FA2A4FD0033A0C4 /* CustomUITestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27C93FF1FA2A4FD0033A0C4 /* CustomUITestsViewController.m */; };
+		B27C94041FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27C94031FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m */; };
 		B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B281D2B81F980C2D0004B70A /* UIView+WXHelper.h */; };
 		B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */; };
 		B29AEC461F9905310082FE93 /* UIViewExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */; };
@@ -88,6 +90,10 @@
 		B24B9C141F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WXLogUnicodeSupport.m"; sourceTree = "<group>"; };
 		B24B9C171F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WXLogUnicodeSupport.h"; sourceTree = "<group>"; };
 		B24B9C181F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WXLogUnicodeSupport.m"; sourceTree = "<group>"; };
+		B27C93FE1FA2A4FD0033A0C4 /* CustomUITestsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomUITestsViewController.h; sourceTree = "<group>"; };
+		B27C93FF1FA2A4FD0033A0C4 /* CustomUITestsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomUITestsViewController.m; sourceTree = "<group>"; };
+		B27C94021FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleButtonTabBarTestViewController.h; sourceTree = "<group>"; };
+		B27C94031FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleButtonTabBarTestViewController.m; sourceTree = "<group>"; };
 		B281D2B81F980C2D0004B70A /* UIView+WXHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXHelper.h"; sourceTree = "<group>"; };
 		B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXHelper.m"; sourceTree = "<group>"; };
 		B29AEC441F9905310082FE93 /* UIViewExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewExtensionsTestViewController.h; sourceTree = "<group>"; };
@@ -195,6 +201,25 @@
 				B24974421F9C1D82009951B7 /* WXTextField.m */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		B27C93FD1FA2A4BA0033A0C4 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				B27C94011FA2A6D10033A0C4 /* MiddleButtonTabBar */,
+				B27C93FE1FA2A4FD0033A0C4 /* CustomUITestsViewController.h */,
+				B27C93FF1FA2A4FD0033A0C4 /* CustomUITestsViewController.m */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		B27C94011FA2A6D10033A0C4 /* MiddleButtonTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B27C94021FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.h */,
+				B27C94031FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m */,
+			);
+			path = MiddleButtonTabBar;
 			sourceTree = "<group>";
 		};
 		B29AEC431F9905160082FE93 /* UIView */ = {
@@ -354,6 +379,7 @@
 		C63059001F96ED9400D3B9E1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B27C93FD1FA2A4BA0033A0C4 /* CustomUI */,
 				C63059011F96ED9400D3B9E1 /* Extensions */,
 			);
 			path = Tests;
@@ -557,6 +583,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C63058FA1F9613DA00D3B9E1 /* CaseExploreViewController.m in Sources */,
+				B27C94001FA2A4FD0033A0C4 /* CustomUITestsViewController.m in Sources */,
 				B29AEC461F9905310082FE93 /* UIViewExtensionsTestViewController.m in Sources */,
 				B2AD658E1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m in Sources */,
 				C63059061F96EDE500D3B9E1 /* NSArrayExtensionsTestViewController.m in Sources */,
@@ -564,6 +591,7 @@
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
 				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,
 				C63059371F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m in Sources */,
+				B27C94041FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m in Sources */,
 				C62352B11F94CD3600E608AC /* main.m in Sources */,
 				C630590C1F96FF1C00D3B9E1 /* NSDictionaryExtensionsTestViewController.m in Sources */,
 				C630592A1F972C2600D3B9E1 /* UIDeviceExtensionsTestViewController.m in Sources */,
