@@ -8,6 +8,7 @@
 
 #import "CustomUITestsViewController.h"
 #import "MiddleButtonTabBarTestViewController.h"
+#import "WXTextFieldTestViewController.h"
 
 @interface CustomUITestsViewController ()
 
@@ -22,8 +23,9 @@
     [super viewDidLoad];
     
     self.title = @"Extentions Test";
-    self.customUIList = @[@"Middle Button TabBar"];
-    self.testClasses = @[
+    self.customUIList = @[@"Middle Button TabBar", @"Text Field with Max Length"];
+    self.testClasses = @[[NSNull null],
+                         [WXTextFieldTestViewController class]
                          ];
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"cell"];
 }

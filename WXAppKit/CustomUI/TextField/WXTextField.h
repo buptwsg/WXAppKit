@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXTextField : UIView
+@interface WXTextField : UITextField
+
+@property (nonatomic) IBInspectable NSUInteger maxLength;
+
+@property (nonatomic) IBInspectable BOOL limitByBytesLength;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24715A51FA4A661007DED4D /* WXTextFieldTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */; };
 		B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B24974391F9C1D56009951B7 /* WXPageControl.h */; };
 		B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B249743A1F9C1D56009951B7 /* WXPageControl.m */; };
 		B249743F1F9C1D72009951B7 /* WXMiddleButtonTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = B249743D1F9C1D72009951B7 /* WXMiddleButtonTabBar.h */; };
@@ -80,6 +81,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B24715A31FA4A661007DED4D /* WXTextFieldTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTextFieldTestViewController.h; sourceTree = "<group>"; };
+		B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTextFieldTestViewController.m; sourceTree = "<group>"; };
 		B24974391F9C1D56009951B7 /* WXPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXPageControl.h; sourceTree = "<group>"; };
 		B249743A1F9C1D56009951B7 /* WXPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXPageControl.m; sourceTree = "<group>"; };
 		B249743D1F9C1D72009951B7 /* WXMiddleButtonTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXMiddleButtonTabBar.h; sourceTree = "<group>"; };
@@ -163,6 +166,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B24715A21FA4A640007DED4D /* WXTextField */ = {
+			isa = PBXGroup;
+			children = (
+				B24715A31FA4A661007DED4D /* WXTextFieldTestViewController.h */,
+				B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */,
+			);
+			path = WXTextField;
+			sourceTree = "<group>";
+		};
 		B24974351F9C1D3E009951B7 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +218,7 @@
 		B27C93FD1FA2A4BA0033A0C4 /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				B24715A21FA4A640007DED4D /* WXTextField */,
 				B27C94011FA2A6D10033A0C4 /* MiddleButtonTabBar */,
 				B27C93FE1FA2A4FD0033A0C4 /* CustomUITestsViewController.h */,
 				B27C93FF1FA2A4FD0033A0C4 /* CustomUITestsViewController.m */,
@@ -589,6 +602,7 @@
 				C63059061F96EDE500D3B9E1 /* NSArrayExtensionsTestViewController.m in Sources */,
 				B2AD658B1F9B89DF00526185 /* NSStringExtensionsTestViewController.m in Sources */,
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
+				B24715A51FA4A661007DED4D /* WXTextFieldTestViewController.m in Sources */,
 				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,
 				C63059371F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m in Sources */,
 				B27C94041FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m in Sources */,
@@ -758,7 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D3S9N3K2MW;
+				DEVELOPMENT_TEAM = 7XVGQ9A5C9;
 				INFOPLIST_FILE = WXAppKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -773,7 +787,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D3S9N3K2MW;
+				DEVELOPMENT_TEAM = 7XVGQ9A5C9;
 				INFOPLIST_FILE = WXAppKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
