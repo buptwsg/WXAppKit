@@ -7,6 +7,7 @@
 //
 
 #import "CustomUITestsViewController.h"
+#import "MiddleButtonTabBarTestViewController.h"
 
 @interface CustomUITestsViewController ()
 
@@ -49,8 +50,32 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath: indexPath animated: YES];
-    UIViewController *vc = [[self.testClasses[indexPath.row] alloc] init];
-    [self.navigationController pushViewController: vc animated: YES];
+    if (0 == indexPath.row) {
+        WXMiddleButtonTabBar.normalTextColor = [UIColor grayColor];
+        WXMiddleButtonTabBar.selectedTextColor = [UIColor darkGrayColor];
+        MiddleButtonTabBarTestViewController *vc = [[MiddleButtonTabBarTestViewController alloc] init];
+        
+        UIViewController *vc1 = [[UIViewController alloc] init];
+        vc1.view.backgroundColor = [UIColor redColor];
+        [vc addChildViewController: vc1 title: @"热门" image: @"home_normal" selectedImage: @"home_highlight"];
+        
+        UIViewController *vc2 = [[UIViewController alloc] init];
+        vc2.view.backgroundColor = [UIColor greenColor];
+        [vc addChildViewController: vc2 title: @"消息" image: @"message_normal" selectedImage: @"message_highlight"];
+        
+        UIViewController *vc3 = [[UIViewController alloc] init];
+        vc3.view.backgroundColor = [UIColor blueColor];
+        [vc addChildViewController: vc3 title: @"同城" image: @"mycity_normal" selectedImage: @"mycity_highlight"];
+        
+        UIViewController *vc4 = [[UIViewController alloc] init];
+        vc4.view.backgroundColor = [UIColor orangeColor];
+        [vc addChildViewController: vc4 title: @"我的" image: @"tabbar_profile" selectedImage: @"tabbar_profile_selected"];
+        [self.navigationController presentViewController: vc animated: YES completion: nil];
+    }
+    else {
+        UIViewController *vc = [[self.testClasses[indexPath.row] alloc] init];
+        [self.navigationController pushViewController: vc animated: YES];
+    }
 }
 
 @end

@@ -11,11 +11,12 @@
 @interface WXMiddleButtonTabBar()
 
 @property (strong, nonatomic) UIButton *middleButton;
+@property (nonatomic) CGFloat middleButtonCenterY;
 
 @end
 
 @implementation WXMiddleButtonTabBar {
-    NSMutableArray *_mutableButtonsArray;
+    NSMutableArray *_mutableImageViewsArray;
     NSMutableArray *_mutableLabelsArray;
 }
 
@@ -40,11 +41,10 @@ static UIColor *_selectedTextColor = nil;
 }
 
 - (void)didAddSubview:(UIView *)subview {
-    NSLog(@"subview %@ is added", subview);
     if ([subview isKindOfClass: NSClassFromString(@"UITabBarButton")]) {
         for (UIView *view in subview.subviews) {
-            if ([view isKindOfClass: [UIButton class]]) {
-                [_mutableButtonsArray addObject: view];
+            if ([view isKindOfClass: [UIImageView class]]) {
+                [_mutableImageViewsArray addObject: view];
             }
             else if ([view isKindOfClass: [UILabel class]]) {
                 [_mutableLabelsArray addObject: view];
@@ -56,8 +56,7 @@ static UIColor *_selectedTextColor = nil;
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGPoint center = self.middleButton.center;
-    self.middleButton.center = CGPointMake(self.frame.size.width / 2, center.y);
+    self.middleButton.center = CGPointMake(self.frame.size.width / 2, self.middleButtonCenterY);
     
     Class class = NSClassFromString(@"UITabBarButton");
     NSMutableArray *buttonsArray = [NSMutableArray array];
@@ -106,11 +105,12 @@ static UIColor *_selectedTextColor = nil;
 #pragma mark - public
 - (void)setMiddleButton:(UIButton *)button atCenterY:(CGFloat)centerY {
     self.middleButton = button;
-    button.center = CGPointMake(self.frame.size.width / 2, centerY);
+    self.middleButtonCenterY = centerY;
+    [button sizeToFit];
     [self addSubview: button];
     
     [button addTarget: self action: @selector(middleButtonClicked) forControlEvents: UIControlEventTouchUpInside];
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget: self action: @selector(middleButtonLongPressed)];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget: self action: @selector(middleButtonLongPressed:)];
     [button addGestureRecognizer: longPress];
 }
 
@@ -131,8 +131,8 @@ static UIColor *_selectedTextColor = nil;
     _selectedTextColor = selectedTextColor;
 }
 
-- (NSArray*)buttonsArray {
-    return [_mutableButtonsArray copy];
+- (NSArray*)imageViewsArray {
+    return [_mutableImageViewsArray copy];
 }
 
 - (NSArray*)labelsArray {
@@ -141,11 +141,11 @@ static UIColor *_selectedTextColor = nil;
 
 #pragma mark - private
 - (void)commonInit {
-    _mutableButtonsArray = [NSMutableArray array];
+    _mutableImageViewsArray = [NSMutableArray array];
     _mutableLabelsArray = [NSMutableArray array];
     
     UITabBarItem *tabBarItem = nil;
-    if ([UITabBarItem respondsToSelector: @selector(appearanceWhenContainedInInstancesOfClasses:)]) {
+    if (@available(iOS 9.0, *)) {
         tabBarItem = [UITabBarItem appearanceWhenContainedInInstancesOfClasses: @[[self class]]];
     }
     else {
@@ -171,9 +171,11 @@ static UIColor *_selectedTextColor = nil;
     }
 }
 
-- (void)middleButtonLongPressed {
-    if (self.wxDelegate && [self.wxDelegate respondsToSelector: @selector(tabBarMmiddleButtonDidLongPressed:)]) {
-        [self.wxDelegate tabBarMmiddleButtonDidLongPressed: self];
+- (void)middleButtonLongPressed: (UILongPressGestureRecognizer*)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+        if (self.wxDelegate && [self.wxDelegate respondsToSelector: @selector(tabBarMmiddleButtonDidLongPressed:)]) {
+            [self.wxDelegate tabBarMmiddleButtonDidLongPressed: self];
+        }
     }
 }
 
