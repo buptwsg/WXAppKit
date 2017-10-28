@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B24715A51FA4A661007DED4D /* WXTextFieldTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */; };
+		B24715A71FA4AE5E007DED4D /* WXTextFieldInXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24715A61FA4AE5E007DED4D /* WXTextFieldInXib.xib */; };
 		B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B24974391F9C1D56009951B7 /* WXPageControl.h */; };
 		B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B249743A1F9C1D56009951B7 /* WXPageControl.m */; };
 		B249743F1F9C1D72009951B7 /* WXMiddleButtonTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = B249743D1F9C1D72009951B7 /* WXMiddleButtonTabBar.h */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		B24715A31FA4A661007DED4D /* WXTextFieldTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTextFieldTestViewController.h; sourceTree = "<group>"; };
 		B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTextFieldTestViewController.m; sourceTree = "<group>"; };
+		B24715A61FA4AE5E007DED4D /* WXTextFieldInXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WXTextFieldInXib.xib; sourceTree = "<group>"; };
 		B24974391F9C1D56009951B7 /* WXPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXPageControl.h; sourceTree = "<group>"; };
 		B249743A1F9C1D56009951B7 /* WXPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXPageControl.m; sourceTree = "<group>"; };
 		B249743D1F9C1D72009951B7 /* WXMiddleButtonTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXMiddleButtonTabBar.h; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			children = (
 				B24715A31FA4A661007DED4D /* WXTextFieldTestViewController.h */,
 				B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */,
+				B24715A61FA4AE5E007DED4D /* WXTextFieldInXib.xib */,
 			);
 			path = WXTextField;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				C62352AE1F94CD3600E608AC /* LaunchScreen.storyboard in Resources */,
 				C62352AB1F94CD3600E608AC /* Assets.xcassets in Resources */,
 				C62352A91F94CD3600E608AC /* Main.storyboard in Resources */,
+				B24715A71FA4AE5E007DED4D /* WXTextFieldInXib.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

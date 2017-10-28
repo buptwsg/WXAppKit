@@ -19,7 +19,11 @@ static void testMaxLength(UIView *rootView) {
 }
 
 static void testMaxLengthInBytes(UIView *rootView) {
-    
+    UIView *view = [[[NSBundle mainBundle] loadNibNamed: @"WXTextFieldInXib" owner: nil options: nil] firstObject];
+    if (view) {
+        view.frame = CGRectMake(0, 100, rootView.width, 50);
+        [rootView addSubview: view];
+    }
 }
 
 static TestCase cases[] = {

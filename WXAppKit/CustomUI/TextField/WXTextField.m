@@ -8,6 +8,12 @@
 
 #import "WXTextField.h"
 
+@interface WXTextField ()
+
+@property (nonatomic, strong) NSString *lastText;
+
+@end
+
 @implementation WXTextField
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -38,8 +44,18 @@
         UITextPosition *position = [textField positionFromPosition: selectedRange.start offset: 0];
         // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
         if (!position) {
-            if (textField.text.length > self.maxLength) {
-                textField.text = [textField.text substringToIndex: self.maxLength];
+            if (!self.limitByBytesLength) {
+                if (textField.text.length > self.maxLength) {
+                    textField.text = [textField.text substringToIndex: self.maxLength];
+                }
+            }
+            else {
+                if ([textField.text lengthOfBytesUsingEncoding: NSUTF8StringEncoding] > self.maxLength) {
+                    textField.text = self.lastText;
+                }
+                else {
+                    self.lastText = textField.text;
+                }
             }
         }
         // 有高亮选择的字符串，则暂不对文字进行统计和限制
@@ -48,8 +64,18 @@
     }
     // 中文输入法以外的直接对其统计限制即可，不考虑其他语种情况
     else {
-        if (textField.text.length > self.maxLength) {
-            textField.text = [textField.text substringToIndex: self.maxLength];
+        if (!self.limitByBytesLength) {
+            if (textField.text.length > self.maxLength) {
+                textField.text = [textField.text substringToIndex: self.maxLength];
+            }
+        }
+        else {
+            if ([textField.text lengthOfBytesUsingEncoding: NSUTF8StringEncoding] > self.maxLength) {
+                textField.text = self.lastText;
+            }
+            else {
+                self.lastText = textField.text;
+            }
         }
     }
 }
