@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20DB32C1FA56AB100DE00FA /* WXWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B20DB32A1FA56AB100DE00FA /* WXWeakProxy.h */; };
+		B20DB32D1FA56AB100DE00FA /* WXWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */; };
 		B24715A51FA4A661007DED4D /* WXTextFieldTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */; };
 		B24715A71FA4AE5E007DED4D /* WXTextFieldInXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24715A61FA4AE5E007DED4D /* WXTextFieldInXib.xib */; };
 		B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B24974391F9C1D56009951B7 /* WXPageControl.h */; };
@@ -82,6 +84,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B20DB32A1FA56AB100DE00FA /* WXWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXWeakProxy.h; sourceTree = "<group>"; };
+		B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXWeakProxy.m; sourceTree = "<group>"; };
 		B24715A31FA4A661007DED4D /* WXTextFieldTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTextFieldTestViewController.h; sourceTree = "<group>"; };
 		B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTextFieldTestViewController.m; sourceTree = "<group>"; };
 		B24715A61FA4AE5E007DED4D /* WXTextFieldInXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WXTextFieldInXib.xib; sourceTree = "<group>"; };
@@ -168,6 +172,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20DB3291FA5696400DE00FA /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B20DB32A1FA56AB100DE00FA /* WXWeakProxy.h */,
+				B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		B24715A21FA4A640007DED4D /* WXTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +337,7 @@
 		C62352BD1F94CD5600E608AC /* WXAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				B20DB3291FA5696400DE00FA /* Foundation */,
 				B24974351F9C1D3E009951B7 /* CustomUI */,
 				C62352C91F94CD9D00E608AC /* Extensions */,
 				C62352BE1F94CD5600E608AC /* WXAppKit.h */,
@@ -484,6 +498,7 @@
 				B249743F1F9C1D72009951B7 /* WXMiddleButtonTabBar.h in Headers */,
 				B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */,
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
+				B20DB32C1FA56AB100DE00FA /* WXWeakProxy.h in Headers */,
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
 				B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */,
@@ -634,6 +649,7 @@
 				B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */,
 				C666CC7F1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m in Sources */,
 				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,
+				B20DB32D1FA56AB100DE00FA /* WXWeakProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
