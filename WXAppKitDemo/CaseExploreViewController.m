@@ -105,7 +105,7 @@
 
 - (void)loadCaseAtIndex: (NSInteger)index {
     TestCase theCase = self.casesArray[index];
-    NSString *title = [NSString stringWithUTF8String: theCase.caseTitle];
+    NSString *title = @(theCase.caseTitle);
     self.caseNameLabel.text = title;
     if (theCase.pFunc) {
         theCase.pFunc(self.view);

@@ -57,6 +57,9 @@
 		C666CC7F1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C666CC7D1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m */; };
 		C666CCA41F9F33E200DC8243 /* WXNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C666CCA21F9F33E200DC8243 /* WXNavigationController.h */; };
 		C666CCA51F9F33E200DC8243 /* WXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C666CCA31F9F33E200DC8243 /* WXNavigationController.m */; };
+		C6A14B7D1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = C6A14B7B1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h */; };
+		C6A14B7E1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A14B7C1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m */; };
+		C6A14BA31FB189380052559E /* NSObjectExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A14BA21FB189380052559E /* NSObjectExtensionsTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +154,10 @@
 		C666CC7D1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXMiddleButtonTabBarController.m; sourceTree = "<group>"; };
 		C666CCA21F9F33E200DC8243 /* WXNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXNavigationController.h; sourceTree = "<group>"; };
 		C666CCA31F9F33E200DC8243 /* WXNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXNavigationController.m; sourceTree = "<group>"; };
+		C6A14B7B1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WXAutoSecureCoding.h"; sourceTree = "<group>"; };
+		C6A14B7C1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXAutoSecureCoding.m"; sourceTree = "<group>"; };
+		C6A14BA11FB189380052559E /* NSObjectExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObjectExtensionsTestViewController.h; sourceTree = "<group>"; };
+		C6A14BA21FB189380052559E /* NSObjectExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectExtensionsTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +356,7 @@
 		C62352C91F94CD9D00E608AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C6A14B7A1FB06EAC0052559E /* NSObject */,
 				B2AD657D1F9B66BE00526185 /* NSAttributeString */,
 				B2AD657E1F9B66BF00526185 /* NSString */,
 				C630592B1F97460400D3B9E1 /* UIColor */,
@@ -418,6 +426,7 @@
 		C63059011F96ED9400D3B9E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C6A14BA01FB189090052559E /* NSObject */,
 				B2AD65881F9B89C200526185 /* NSAttributedString */,
 				B2AD65871F9B89C200526185 /* NSString */,
 				B29AEC431F9905160082FE93 /* UIView */,
@@ -485,6 +494,24 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		C6A14B7A1FB06EAC0052559E /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				C6A14B7B1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h */,
+				C6A14B7C1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		C6A14BA01FB189090052559E /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				C6A14BA11FB189380052559E /* NSObjectExtensionsTestViewController.h */,
+				C6A14BA21FB189380052559E /* NSObjectExtensionsTestViewController.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -500,6 +527,7 @@
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
 				B20DB32C1FA56AB100DE00FA /* WXWeakProxy.h in Headers */,
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
+				C6A14B7D1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
 				B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */,
 				C666CCA41F9F33E200DC8243 /* WXNavigationController.h in Headers */,
@@ -622,6 +650,7 @@
 				B2AD658B1F9B89DF00526185 /* NSStringExtensionsTestViewController.m in Sources */,
 				C62352A61F94CD3600E608AC /* ViewController.m in Sources */,
 				B24715A51FA4A661007DED4D /* WXTextFieldTestViewController.m in Sources */,
+				C6A14BA31FB189380052559E /* NSObjectExtensionsTestViewController.m in Sources */,
 				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,
 				C63059371F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m in Sources */,
 				B27C94041FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m in Sources */,
@@ -646,6 +675,7 @@
 				C666CCA51F9F33E200DC8243 /* WXNavigationController.m in Sources */,
 				B24974401F9C1D72009951B7 /* WXMiddleButtonTabBar.m in Sources */,
 				C63059331F97467A00D3B9E1 /* UIColor+WXHex.m in Sources */,
+				C6A14B7E1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m in Sources */,
 				B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */,
 				C666CC7F1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m in Sources */,
 				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,
