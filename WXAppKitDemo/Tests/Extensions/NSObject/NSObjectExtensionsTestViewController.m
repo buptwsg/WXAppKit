@@ -7,6 +7,7 @@
 //
 
 #import "NSObjectExtensionsTestViewController.h"
+#import "NSObject+WXToDictionary.h"
 
 static void testAutoSecureCoding(UIView *rootView) {
     School *mySchool = [[School alloc] init];
@@ -32,18 +33,51 @@ static void testAutoSecureCoding(UIView *rootView) {
     NSLog(@"recovered school is %@", recoveredSchool);
 }
 
+static void testObject2Dictionary(UIView *rootView) {
+    School *mySchool = [[School alloc] init];
+    mySchool.numberOfGrades = 3;
+    mySchool.numberOfClasses = 3 * 8;
+    
+    NSMutableArray *studentsArray = [NSMutableArray array];
+    for (int i = 0; i < 10; i++) {
+        Student *s = [[Student alloc] init];
+        s.age = 10 + i;
+        s.distance = 2 + 0.5 * i;
+        s.name = [NSString stringWithFormat: @"Student %u %f", s.age, s.distance];
+        s.homeAddress = @"Beijing";
+        s.gender = i;
+        [studentsArray addObject: s];
+    }
+    mySchool.students = studentsArray;
+    
+    NSLog(@"mySchool is %@", mySchool);
+}
+
 static TestCase cases[] = {
-    {"Test auto secure coding", testAutoSecureCoding}
+    {"Test auto secure coding", testAutoSecureCoding},
+    {"Test object to dictionary", testObject2Dictionary}
 };
 
 @interface NSObjectExtensionsTestViewController ()
 
 @end
 
+@implementation Human
+- (NSString*)description {
+    return self.wx_description;
+}
+@end
+
 @implementation Student
+- (NSString*)description {
+    return self.wx_description;
+}
 @end
 
 @implementation School
+- (NSString*)description {
+    return self.wx_description;
+}
 @end
 
 @implementation NSObjectExtensionsTestViewController

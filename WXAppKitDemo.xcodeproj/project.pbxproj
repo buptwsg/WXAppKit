@@ -60,6 +60,8 @@
 		C6A14B7D1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = C6A14B7B1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h */; };
 		C6A14B7E1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A14B7C1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m */; };
 		C6A14BA31FB189380052559E /* NSObjectExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A14BA21FB189380052559E /* NSObjectExtensionsTestViewController.m */; };
+		C6A14BB61FB2E1E50052559E /* NSObject+WXToDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = C6A14BB41FB2E1E50052559E /* NSObject+WXToDictionary.h */; };
+		C6A14BB71FB2E1E50052559E /* NSObject+WXToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A14BB51FB2E1E50052559E /* NSObject+WXToDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		C6A14B7C1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXAutoSecureCoding.m"; sourceTree = "<group>"; };
 		C6A14BA11FB189380052559E /* NSObjectExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObjectExtensionsTestViewController.h; sourceTree = "<group>"; };
 		C6A14BA21FB189380052559E /* NSObjectExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObjectExtensionsTestViewController.m; sourceTree = "<group>"; };
+		C6A14BB41FB2E1E50052559E /* NSObject+WXToDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WXToDictionary.h"; sourceTree = "<group>"; };
+		C6A14BB51FB2E1E50052559E /* NSObject+WXToDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXToDictionary.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -499,6 +503,8 @@
 			children = (
 				C6A14B7B1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h */,
 				C6A14B7C1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m */,
+				C6A14BB41FB2E1E50052559E /* NSObject+WXToDictionary.h */,
+				C6A14BB51FB2E1E50052559E /* NSObject+WXToDictionary.m */,
 			);
 			path = NSObject;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				B24B9C191F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.h in Headers */,
 				C63059321F97467A00D3B9E1 /* UIColor+WXHex.h in Headers */,
 				B249743F1F9C1D72009951B7 /* WXMiddleButtonTabBar.h in Headers */,
+				C6A14BB61FB2E1E50052559E /* NSObject+WXToDictionary.h in Headers */,
 				B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */,
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
 				B20DB32C1FA56AB100DE00FA /* WXWeakProxy.h in Headers */,
@@ -680,6 +687,7 @@
 				C666CC7F1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m in Sources */,
 				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,
 				B20DB32D1FA56AB100DE00FA /* WXWeakProxy.m in Sources */,
+				C6A14BB71FB2E1E50052559E /* NSObject+WXToDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

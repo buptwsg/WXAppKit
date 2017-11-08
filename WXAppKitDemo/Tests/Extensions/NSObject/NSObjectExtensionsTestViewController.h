@@ -12,7 +12,13 @@
 
 @end
 
-@interface Student : NSObject
+@interface Human : NSObject
+
+@property (nonatomic) int gender;
+
+@end
+
+@interface Student : Human
 
 @property (nonatomic) unsigned int age;
 @property (nonatomic) float distance;
