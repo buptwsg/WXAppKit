@@ -67,7 +67,6 @@
     self.caseNameLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
     self.excludeViews = @[self.prevButton, self.nextButton, self.runButton, self.caseNameLabel];
-    [self updateButtonStatus];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,15 +77,19 @@
 - (void)nextCase {
     [self doClear];
     self.caseIndex += 1;
+    if (self.caseIndex >= self.numberOfCases) {
+        self.caseIndex = 0;
+    }
     [self loadCaseAtIndex: self.caseIndex];
-    [self updateButtonStatus];
 }
 
 - (void)prevCase {
     [self doClear];
     self.caseIndex -= 1;
+    if (self.caseIndex < 0) {
+        self.caseIndex = self.numberOfCases - 1;
+    }
     [self loadCaseAtIndex: self.caseIndex];
-    [self updateButtonStatus];
 }
 
 - (void)runCase {
@@ -109,22 +112,6 @@
     self.caseNameLabel.text = title;
     if (theCase.pFunc) {
         theCase.pFunc(self.view);
-    }
-}
-
-- (void)updateButtonStatus {
-    if (self.caseIndex >= self.numberOfCases - 1) {
-        self.nextButton.enabled = NO;
-    }
-    else {
-        self.nextButton.enabled = YES;
-    }
-    
-    if (self.caseIndex == 0) {
-        self.prevButton.enabled = NO;
-    }
-    else {
-        self.prevButton.enabled = YES;
     }
 }
 

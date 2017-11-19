@@ -8,6 +8,7 @@
 
 #import "UIViewExtensionsTestViewController.h"
 #import "UIView+WXHelper.h"
+#import "UIView+WXAutoResizingMaskLayout.h"
 
 static void testFrameShortcut(UIView *rootView) {
     UIView *view = [[UIView alloc] initWithFrame: CGRectMake(100, 200, 200, 100)];
@@ -150,6 +151,105 @@ static void testIsPortrait(UIView *rootView) {
     }
 }
 
+static void testSnapCornerAndCenter(UIView *rootView) {
+    UIView *containerView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 300, 300)];
+    containerView.layer.borderWidth = 1;
+    containerView.layer.borderColor = [UIColor redColor].CGColor;
+    [rootView addSubview: containerView];
+    [containerView centerInSuperView];
+    
+    CGFloat wh = 50;
+    UIView *topLeft = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    topLeft.backgroundColor = [UIColor redColor];
+    [containerView addSubview: topLeft];
+    topLeft.snapLeft(10).and.snapTop(10);
+    
+    UIView *topRight = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    topRight.backgroundColor = [UIColor greenColor];
+    [containerView addSubview: topRight];
+    topRight.snapRight(10).and.snapTop(10);
+    
+    UIView *bottomLeft = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    bottomLeft.backgroundColor = [UIColor blueColor];
+    [containerView addSubview: bottomLeft];
+    bottomLeft.snapBottom(10).and.snapLeft(10);
+    
+    UIView *bottomRight = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    bottomRight.backgroundColor = [UIColor purpleColor];
+    [containerView addSubview: bottomRight];
+    bottomRight.snapBottom(10).and.snapRight(10);
+    
+    UIView *topCenter = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    topCenter.backgroundColor = [UIColor cyanColor];
+    [containerView addSubview: topCenter];
+    topCenter.snapHCenter.and.snapTop(10);
+    
+    UIView *bottomCenter = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    bottomCenter.backgroundColor = [UIColor orangeColor];
+    [containerView addSubview: bottomCenter];
+    bottomCenter.snapHCenter.and.snapBottom(10);
+    
+    UIView *leftCenter = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    leftCenter.backgroundColor = [UIColor blackColor];
+    [containerView addSubview: leftCenter];
+    leftCenter.snapVCenter.and.snapLeft(10);
+    
+    UIView *rightCenter = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    rightCenter.backgroundColor = [UIColor yellowColor];
+    [containerView addSubview: rightCenter];
+    rightCenter.snapVCenter.and.snapRight(10);
+    
+    UIView *center = [[UIView alloc] initWithFrame: CGRectMake(0, 0, wh, wh)];
+    center.backgroundColor = [UIColor magentaColor];
+    [containerView addSubview: center];
+    [center centerInSuperView];
+    
+    [UIView animateWithDuration: 1 delay: 1 options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
+        containerView.frame = CGRectMake((rootView.width - 400)/2, (rootView.height - 400)/2, 400, 400);
+    } completion: nil];
+}
+
+static void testFlexibleWH(UIView *rootView) {
+    UIView *containerView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 300, 300)];
+    containerView.layer.borderWidth = 1;
+    containerView.layer.borderColor = [UIColor redColor].CGColor;
+    [rootView addSubview: containerView];
+    [containerView centerInSuperView];
+    
+    UIView *fw = [[UIView alloc] init];
+    fw.backgroundColor = [UIColor orangeColor];
+    fw.height = 50;
+    [containerView addSubview: fw];
+    fw.snapVCenter.and.flexibleWidth(10, 20);
+    
+    UIView *fh = [[UIView alloc] init];
+    fh.backgroundColor = [UIColor yellowColor];
+    fh.width = 50;
+    [containerView addSubview: fh];
+    fh.snapHCenter.and.flexibleHeight(10, 20);
+    
+    [UIView animateWithDuration: 1 delay: 1 options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
+        containerView.frame = CGRectMake((rootView.width - 400)/2, (rootView.height - 400)/2, 400, 400);
+    } completion: nil];
+}
+
+static void testFillWithEdges(UIView *rootView) {
+    UIView *containerView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 300, 300)];
+    containerView.layer.borderWidth = 1;
+    containerView.layer.borderColor = [UIColor redColor].CGColor;
+    [rootView addSubview: containerView];
+    [containerView centerInSuperView];
+    
+    UIView *fwh = [[UIView alloc] init];
+    fwh.backgroundColor = [UIColor yellowColor];
+    [containerView addSubview: fwh];
+    fwh.fillSuperViewWithEdges(UIEdgeInsetsMake(10, 10, 10, 10));
+    
+    [UIView animateWithDuration: 1 delay: 1 options: UIViewAnimationOptionRepeat | UIViewAnimationOptionAutoreverse animations:^{
+        containerView.frame = CGRectMake((rootView.width - 400)/2, (rootView.height - 400)/2, 400, 400);
+    } completion: nil];
+}
+
 static TestCase cases[] = {
     {"Test frame shortcut reader", testFrameShortcut},
     {"Test frame set left and top", testFrameSetLeftAndTop},
@@ -161,7 +261,10 @@ static TestCase cases[] = {
     {"Test Scale", testScale},
     {"Test Rotation", testRotation},
     {"Test View Controller", testViewController},
-    {"Test isPortrait", testIsPortrait}
+    {"Test isPortrait", testIsPortrait},
+    {"Test snap corner and center", testSnapCornerAndCenter},
+    {"Test flexible width and height", testFlexibleWH},
+    {"Test fill with edges", testFillWithEdges}
 };
 
 @interface UIViewExtensionsTestViewController ()

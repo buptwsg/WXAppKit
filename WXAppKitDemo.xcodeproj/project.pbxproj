@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B20DB32C1FA56AB100DE00FA /* WXWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B20DB32A1FA56AB100DE00FA /* WXWeakProxy.h */; };
 		B20DB32D1FA56AB100DE00FA /* WXWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */; };
+		B23F7D011FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h in Headers */ = {isa = PBXBuildFile; fileRef = B23F7CFF1FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h */; };
+		B23F7D021FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m in Sources */ = {isa = PBXBuildFile; fileRef = B23F7D001FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m */; };
 		B24715A51FA4A661007DED4D /* WXTextFieldTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */; };
 		B24715A71FA4AE5E007DED4D /* WXTextFieldInXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = B24715A61FA4AE5E007DED4D /* WXTextFieldInXib.xib */; };
 		B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B24974391F9C1D56009951B7 /* WXPageControl.h */; };
@@ -91,6 +93,8 @@
 /* Begin PBXFileReference section */
 		B20DB32A1FA56AB100DE00FA /* WXWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXWeakProxy.h; sourceTree = "<group>"; };
 		B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXWeakProxy.m; sourceTree = "<group>"; };
+		B23F7CFF1FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WXNavigationBarExt.h"; sourceTree = "<group>"; };
+		B23F7D001FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WXNavigationBarExt.m"; sourceTree = "<group>"; };
 		B24715A31FA4A661007DED4D /* WXTextFieldTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTextFieldTestViewController.h; sourceTree = "<group>"; };
 		B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTextFieldTestViewController.m; sourceTree = "<group>"; };
 		B24715A61FA4AE5E007DED4D /* WXTextFieldInXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WXTextFieldInXib.xib; sourceTree = "<group>"; };
@@ -190,6 +194,15 @@
 				B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		B23F7CFE1FC136A60010059A /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				B23F7CFF1FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h */,
+				B23F7D001FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m */,
+			);
+			path = UINavigationBar;
 			sourceTree = "<group>";
 		};
 		B24715A21FA4A640007DED4D /* WXTextField */ = {
@@ -360,6 +373,7 @@
 		C62352C91F94CD9D00E608AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B23F7CFE1FC136A60010059A /* UINavigationBar */,
 				C6A14B7A1FB06EAC0052559E /* NSObject */,
 				B2AD657D1F9B66BE00526185 /* NSAttributeString */,
 				B2AD657E1F9B66BF00526185 /* NSString */,
@@ -536,6 +550,7 @@
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 				C6A14B7D1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
+				B23F7D011FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h in Headers */,
 				B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */,
 				C666CCA41F9F33E200DC8243 /* WXNavigationController.h in Headers */,
 				B2AD65811F9B66F800526185 /* NSAttributedString+WXHeight.h in Headers */,
@@ -681,6 +696,7 @@
 				B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */,
 				C666CCA51F9F33E200DC8243 /* WXNavigationController.m in Sources */,
 				B24974401F9C1D72009951B7 /* WXMiddleButtonTabBar.m in Sources */,
+				B23F7D021FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m in Sources */,
 				C63059331F97467A00D3B9E1 /* UIColor+WXHex.m in Sources */,
 				C6A14B7E1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m in Sources */,
 				B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */,

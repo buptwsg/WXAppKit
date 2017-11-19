@@ -163,4 +163,14 @@
     //A view may be added to UIWindow, in this case, it has no associated view controller
     return nil;
 }
+
+- (nullable UIView*)subviewWithTag:(NSInteger)tag {
+    for (UIView *subview in self.subviews) {
+        if (subview.tag == tag) {
+            return subview;
+        }
+    }
+    return nil;
+}
+
 @end

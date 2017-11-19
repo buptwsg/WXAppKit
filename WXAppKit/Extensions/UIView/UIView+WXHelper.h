@@ -102,6 +102,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nullable, nonatomic, readonly) UIViewController *wx_viewController;
 
+/**
+ Different from viewWithTag:, this method will only search view with tag from subviews
+ */
+- (nullable UIView*)subviewWithTag: (NSInteger)tag;
+
 @end
 
 NS_ASSUME_NONNULL_END
