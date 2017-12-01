@@ -5,7 +5,7 @@
 //  Created by sulirong on 2017/10/16.
 //  Copyright © 2017年 buptwsg. All rights reserved.
 //
-
+#import <objc/runtime.h>
 #import "ViewController.h"
 #import "ExtentionsTestViewController.h"
 #import "CustomUITestsViewController.h"
@@ -26,6 +26,13 @@
                          [ExtentionsTestViewController class],
                          [CustomUITestsViewController class]
                          ];
+    Method m = class_getInstanceMethod([self class], @selector(didReceiveMemoryWarning));
+    const char *typeEncoding = method_getTypeEncoding(m);
+    NSLog(@"type encoding is %s", typeEncoding);
+}
+
+- (int)myTestMethod: (int)a intb: (int)b intc:(int)c stringd: (NSString*)d {
+    return 0;
 }
 
 - (void)didReceiveMemoryWarning {

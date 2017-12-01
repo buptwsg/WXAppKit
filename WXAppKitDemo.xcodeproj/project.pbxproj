@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B20DB32C1FA56AB100DE00FA /* WXWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B20DB32A1FA56AB100DE00FA /* WXWeakProxy.h */; };
-		B20DB32D1FA56AB100DE00FA /* WXWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */; };
 		B23F7D011FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h in Headers */ = {isa = PBXBuildFile; fileRef = B23F7CFF1FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h */; };
 		B23F7D021FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m in Sources */ = {isa = PBXBuildFile; fileRef = B23F7D001FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m */; };
 		B24715A51FA4A661007DED4D /* WXTextFieldTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24715A41FA4A661007DED4D /* WXTextFieldTestViewController.m */; };
@@ -34,6 +32,10 @@
 		B2AD65861F9B671C00526185 /* NSString+WXHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD65841F9B671C00526185 /* NSString+WXHeight.m */; };
 		B2AD658B1F9B89DF00526185 /* NSStringExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD658A1F9B89DF00526185 /* NSStringExtensionsTestViewController.m */; };
 		B2AD658E1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD658D1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m */; };
+		C62113541FD1385600D3C6B2 /* WXWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C62113521FD1385600D3C6B2 /* WXWeakProxy.m */; };
+		C62113551FD1385600D3C6B2 /* WXWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C62113531FD1385600D3C6B2 /* WXWeakProxy.h */; };
+		C62113641FD163DA00D3C6B2 /* WXRuntimeHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C62113621FD163DA00D3C6B2 /* WXRuntimeHelper.h */; };
+		C62113651FD163DA00D3C6B2 /* WXRuntimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C62113631FD163DA00D3C6B2 /* WXRuntimeHelper.m */; };
 		C62352A31F94CD3600E608AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C62352A21F94CD3600E608AC /* AppDelegate.m */; };
 		C62352A61F94CD3600E608AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62352A51F94CD3600E608AC /* ViewController.m */; };
 		C62352A91F94CD3600E608AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C62352A71F94CD3600E608AC /* Main.storyboard */; };
@@ -91,8 +93,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B20DB32A1FA56AB100DE00FA /* WXWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXWeakProxy.h; sourceTree = "<group>"; };
-		B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXWeakProxy.m; sourceTree = "<group>"; };
 		B23F7CFF1FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WXNavigationBarExt.h"; sourceTree = "<group>"; };
 		B23F7D001FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WXNavigationBarExt.m"; sourceTree = "<group>"; };
 		B24715A31FA4A661007DED4D /* WXTextFieldTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTextFieldTestViewController.h; sourceTree = "<group>"; };
@@ -124,6 +124,10 @@
 		B2AD658A1F9B89DF00526185 /* NSStringExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringExtensionsTestViewController.m; sourceTree = "<group>"; };
 		B2AD658C1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringExtensionsTestViewController.h; sourceTree = "<group>"; };
 		B2AD658D1F9B8A0B00526185 /* NSAttributedStringExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAttributedStringExtensionsTestViewController.m; sourceTree = "<group>"; };
+		C62113521FD1385600D3C6B2 /* WXWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXWeakProxy.m; sourceTree = "<group>"; };
+		C62113531FD1385600D3C6B2 /* WXWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXWeakProxy.h; sourceTree = "<group>"; };
+		C62113621FD163DA00D3C6B2 /* WXRuntimeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXRuntimeHelper.h; sourceTree = "<group>"; };
+		C62113631FD163DA00D3C6B2 /* WXRuntimeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXRuntimeHelper.m; sourceTree = "<group>"; };
 		C623529E1F94CD3600E608AC /* WXAppKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXAppKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62352A11F94CD3600E608AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C62352A21F94CD3600E608AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -190,8 +194,7 @@
 		B20DB3291FA5696400DE00FA /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				B20DB32A1FA56AB100DE00FA /* WXWeakProxy.h */,
-				B20DB32B1FA56AB100DE00FA /* WXWeakProxy.m */,
+				C62113611FD1638800D3C6B2 /* Runtime */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -320,6 +323,24 @@
 			path = NSAttributedString;
 			sourceTree = "<group>";
 		};
+		C62113511FD1381300D3C6B2 /* AntiCrash */ = {
+			isa = PBXGroup;
+			children = (
+				C62113531FD1385600D3C6B2 /* WXWeakProxy.h */,
+				C62113521FD1385600D3C6B2 /* WXWeakProxy.m */,
+			);
+			path = AntiCrash;
+			sourceTree = "<group>";
+		};
+		C62113611FD1638800D3C6B2 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				C62113621FD163DA00D3C6B2 /* WXRuntimeHelper.h */,
+				C62113631FD163DA00D3C6B2 /* WXRuntimeHelper.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
 		C62352951F94CD3600E608AC = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +382,7 @@
 		C62352BD1F94CD5600E608AC /* WXAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				C62113511FD1381300D3C6B2 /* AntiCrash */,
 				B20DB3291FA5696400DE00FA /* Foundation */,
 				B24974351F9C1D3E009951B7 /* CustomUI */,
 				C62352C91F94CD9D00E608AC /* Extensions */,
@@ -546,12 +568,13 @@
 				C6A14BB61FB2E1E50052559E /* NSObject+WXToDictionary.h in Headers */,
 				B249743B1F9C1D56009951B7 /* WXPageControl.h in Headers */,
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
-				B20DB32C1FA56AB100DE00FA /* WXWeakProxy.h in Headers */,
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 				C6A14B7D1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
 				B23F7D011FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h in Headers */,
 				B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */,
+				C62113641FD163DA00D3C6B2 /* WXRuntimeHelper.h in Headers */,
+				C62113551FD1385600D3C6B2 /* WXWeakProxy.h in Headers */,
 				C666CCA41F9F33E200DC8243 /* WXNavigationController.h in Headers */,
 				B2AD65811F9B66F800526185 /* NSAttributedString+WXHeight.h in Headers */,
 				C630593E1F976BC500D3B9E1 /* UIView+WXAutoResizingMaskLayout.h in Headers */,
@@ -693,16 +716,17 @@
 				C63059101F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.m in Sources */,
 				C630593F1F976BC500D3B9E1 /* UIView+WXAutoResizingMaskLayout.m in Sources */,
 				B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */,
+				C62113541FD1385600D3C6B2 /* WXWeakProxy.m in Sources */,
 				B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */,
 				C666CCA51F9F33E200DC8243 /* WXNavigationController.m in Sources */,
 				B24974401F9C1D72009951B7 /* WXMiddleButtonTabBar.m in Sources */,
 				B23F7D021FC136E80010059A /* UINavigationBar+WXNavigationBarExt.m in Sources */,
+				C62113651FD163DA00D3C6B2 /* WXRuntimeHelper.m in Sources */,
 				C63059331F97467A00D3B9E1 /* UIColor+WXHex.m in Sources */,
 				C6A14B7E1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m in Sources */,
 				B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */,
 				C666CC7F1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m in Sources */,
 				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,
-				B20DB32D1FA56AB100DE00FA /* WXWeakProxy.m in Sources */,
 				C6A14BB71FB2E1E50052559E /* NSObject+WXToDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
