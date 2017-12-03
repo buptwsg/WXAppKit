@@ -10,4 +10,6 @@
 
 @interface NSObject (WXAntiKVOCrash)
 
+- (void)wx_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath;
+
 @end

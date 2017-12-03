@@ -43,8 +43,7 @@
 @implementation WXKVOProxy
 - (void)dealloc {
     for (NSString *keyPath in self.keyPathObserverMap) {
-//        NSLog(@"remove observer, for %@", self.observed);
-        [self.observed removeObserver: self forKeyPath: keyPath];
+        [self.observed wx_removeObserver: self forKeyPath: keyPath];
     }
 }
 
@@ -143,16 +142,12 @@ static void *WXAntiKVOCrashContext = &WXAntiKVOCrashContext;
 }
 
 - (WXKVOProxy*)kvoProxy {
-    WXKVOProxy *proxy = nil;
-    @autoreleasepool {
-        proxy = objc_getAssociatedObject(self, WXAntiKVOCrashContext);
-        if (!proxy) {
-            proxy = [[WXKVOProxy alloc] init];
-            proxy.observed = self;
-            objc_setAssociatedObject(self, WXAntiKVOCrashContext, proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        }
+    WXKVOProxy *proxy = objc_getAssociatedObject(self, WXAntiKVOCrashContext);
+    if (!proxy) {
+        proxy = [[WXKVOProxy alloc] init];
+        proxy.observed = self;
+        objc_setAssociatedObject(self, WXAntiKVOCrashContext, proxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-
     return proxy;
 }
 
