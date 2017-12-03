@@ -25,6 +25,7 @@
 		B27C94041FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27C94031FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m */; };
 		B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B281D2B81F980C2D0004B70A /* UIView+WXHelper.h */; };
 		B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */; };
+		B2942CD71FD385A0005B5160 /* AntiCrashTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2942CD61FD385A0005B5160 /* AntiCrashTestsViewController.m */; };
 		B29AEC461F9905310082FE93 /* UIViewExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */; };
 		B2AD65811F9B66F800526185 /* NSAttributedString+WXHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AD657F1F9B66F800526185 /* NSAttributedString+WXHeight.h */; };
 		B2AD65821F9B66F800526185 /* NSAttributedString+WXHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD65801F9B66F800526185 /* NSAttributedString+WXHeight.m */; };
@@ -116,6 +117,8 @@
 		B27C94031FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleButtonTabBarTestViewController.m; sourceTree = "<group>"; };
 		B281D2B81F980C2D0004B70A /* UIView+WXHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WXHelper.h"; sourceTree = "<group>"; };
 		B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXHelper.m"; sourceTree = "<group>"; };
+		B2942CD51FD385A0005B5160 /* AntiCrashTestsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AntiCrashTestsViewController.h; sourceTree = "<group>"; };
+		B2942CD61FD385A0005B5160 /* AntiCrashTestsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiCrashTestsViewController.m; sourceTree = "<group>"; };
 		B29AEC441F9905310082FE93 /* UIViewExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewExtensionsTestViewController.h; sourceTree = "<group>"; };
 		B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewExtensionsTestViewController.m; sourceTree = "<group>"; };
 		B2AD657F1F9B66F800526185 /* NSAttributedString+WXHeight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+WXHeight.h"; sourceTree = "<group>"; };
@@ -280,6 +283,15 @@
 				B27C94031FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m */,
 			);
 			path = MiddleButtonTabBar;
+			sourceTree = "<group>";
+		};
+		B2942CD41FD38550005B5160 /* AntiCrash */ = {
+			isa = PBXGroup;
+			children = (
+				B2942CD51FD385A0005B5160 /* AntiCrashTestsViewController.h */,
+				B2942CD61FD385A0005B5160 /* AntiCrashTestsViewController.m */,
+			);
+			path = AntiCrash;
 			sourceTree = "<group>";
 		};
 		B29AEC431F9905160082FE93 /* UIView */ = {
@@ -463,6 +475,7 @@
 		C63059001F96ED9400D3B9E1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B2942CD41FD38550005B5160 /* AntiCrash */,
 				B27C93FD1FA2A4BA0033A0C4 /* CustomUI */,
 				C63059011F96ED9400D3B9E1 /* Extensions */,
 			);
@@ -705,6 +718,7 @@
 				C6A14BA31FB189380052559E /* NSObjectExtensionsTestViewController.m in Sources */,
 				C63059091F96F1FD00D3B9E1 /* ExtentionsTestViewController.m in Sources */,
 				C63059371F9761A800D3B9E1 /* UIColorExtensionsTestViewController.m in Sources */,
+				B2942CD71FD385A0005B5160 /* AntiCrashTestsViewController.m in Sources */,
 				B27C94041FA2A70E0033A0C4 /* MiddleButtonTabBarTestViewController.m in Sources */,
 				C62352B11F94CD3600E608AC /* main.m in Sources */,
 				C630590C1F96FF1C00D3B9E1 /* NSDictionaryExtensionsTestViewController.m in Sources */,

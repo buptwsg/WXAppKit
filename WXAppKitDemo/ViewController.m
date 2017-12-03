@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ExtentionsTestViewController.h"
 #import "CustomUITestsViewController.h"
+#import "AntiCrashTestsViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -21,14 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.testCases = @[@"Extensions Test", @"CustomUI Test"];
+    self.testCases = @[@"Extensions Test", @"CustomUI Test", @"AntiCrash"];
     self.testClasses = @[
                          [ExtentionsTestViewController class],
-                         [CustomUITestsViewController class]
+                         [CustomUITestsViewController class],
+                         [AntiCrashTestsViewController class]
                          ];
-    Method m = class_getInstanceMethod([self class], @selector(didReceiveMemoryWarning));
-    const char *typeEncoding = method_getTypeEncoding(m);
-    NSLog(@"type encoding is %s", typeEncoding);
 }
 
 - (int)myTestMethod: (int)a intb: (int)b intc:(int)c stringd: (NSString*)d {
