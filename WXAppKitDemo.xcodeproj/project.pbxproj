@@ -26,6 +26,10 @@
 		B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B281D2B81F980C2D0004B70A /* UIView+WXHelper.h */; };
 		B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */; };
 		B2942CD71FD385A0005B5160 /* AntiCrashTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2942CD61FD385A0005B5160 /* AntiCrashTestsViewController.m */; };
+		B2942CDA1FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = B2942CD81FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.h */; };
+		B2942CDB1FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = B2942CD91FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.m */; };
+		B2942CDE1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = B2942CDC1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.h */; };
+		B2942CDF1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = B2942CDD1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.m */; };
 		B29AEC461F9905310082FE93 /* UIViewExtensionsTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */; };
 		B2AD65811F9B66F800526185 /* NSAttributedString+WXHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = B2AD657F1F9B66F800526185 /* NSAttributedString+WXHeight.h */; };
 		B2AD65821F9B66F800526185 /* NSAttributedString+WXHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = B2AD65801F9B66F800526185 /* NSAttributedString+WXHeight.m */; };
@@ -119,6 +123,10 @@
 		B281D2B91F980C2D0004B70A /* UIView+WXHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXHelper.m"; sourceTree = "<group>"; };
 		B2942CD51FD385A0005B5160 /* AntiCrashTestsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AntiCrashTestsViewController.h; sourceTree = "<group>"; };
 		B2942CD61FD385A0005B5160 /* AntiCrashTestsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiCrashTestsViewController.m; sourceTree = "<group>"; };
+		B2942CD81FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WXAntiKVOCrash.h"; sourceTree = "<group>"; };
+		B2942CD91FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXAntiKVOCrash.m"; sourceTree = "<group>"; };
+		B2942CDC1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WXBackgroundDetector.h"; sourceTree = "<group>"; };
+		B2942CDD1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WXBackgroundDetector.m"; sourceTree = "<group>"; };
 		B29AEC441F9905310082FE93 /* UIViewExtensionsTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIViewExtensionsTestViewController.h; sourceTree = "<group>"; };
 		B29AEC451F9905310082FE93 /* UIViewExtensionsTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIViewExtensionsTestViewController.m; sourceTree = "<group>"; };
 		B2AD657F1F9B66F800526185 /* NSAttributedString+WXHeight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+WXHeight.h"; sourceTree = "<group>"; };
@@ -342,10 +350,14 @@
 		C62113511FD1381300D3C6B2 /* AntiCrash */ = {
 			isa = PBXGroup;
 			children = (
+				B2942CDC1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.h */,
+				B2942CDD1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.m */,
 				C62113531FD1385600D3C6B2 /* WXWeakProxy.h */,
 				C62113521FD1385600D3C6B2 /* WXWeakProxy.m */,
 				C6A8E89F1FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.h */,
 				C6A8E8A01FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.m */,
+				B2942CD81FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.h */,
+				B2942CD91FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.m */,
 			);
 			path = AntiCrash;
 			sourceTree = "<group>";
@@ -590,9 +602,11 @@
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 				C6A14B7D1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h in Headers */,
+				B2942CDA1FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
 				B23F7D011FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h in Headers */,
 				B281D2BA1F980C2D0004B70A /* UIView+WXHelper.h in Headers */,
+				B2942CDE1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.h in Headers */,
 				C62113641FD163DA00D3C6B2 /* WXRuntimeHelper.h in Headers */,
 				C62113551FD1385600D3C6B2 /* WXWeakProxy.h in Headers */,
 				C666CCA41F9F33E200DC8243 /* WXNavigationController.h in Headers */,
@@ -738,6 +752,7 @@
 				C630593F1F976BC500D3B9E1 /* UIView+WXAutoResizingMaskLayout.m in Sources */,
 				B24B9C1A1F96C93900C2DAD0 /* NSDictionary+WXLogUnicodeSupport.m in Sources */,
 				C62113541FD1385600D3C6B2 /* WXWeakProxy.m in Sources */,
+				B2942CDB1FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.m in Sources */,
 				B281D2BB1F980C2D0004B70A /* UIView+WXHelper.m in Sources */,
 				C6A8E8A21FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.m in Sources */,
 				C666CCA51F9F33E200DC8243 /* WXNavigationController.m in Sources */,
@@ -746,6 +761,7 @@
 				C62113651FD163DA00D3C6B2 /* WXRuntimeHelper.m in Sources */,
 				C63059331F97467A00D3B9E1 /* UIColor+WXHex.m in Sources */,
 				C6A14B7E1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m in Sources */,
+				B2942CDF1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.m in Sources */,
 				B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */,
 				C666CC7F1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m in Sources */,
 				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,

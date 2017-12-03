@@ -77,9 +77,9 @@ static BOOL __addMethod(Class cls, SEL sel) {
 
 - (id)wx_forwardingTargetForSelector: (SEL)selector {
     //in DEBUG build, we should do nothing
-//#ifdef DEBUG
-//    return [self wx_forwardingTargetForSelector: selector];
-//#elif
+#ifdef DEBUG
+    return [self wx_forwardingTargetForSelector: selector];
+#elif
     //check if the class overrides method -forwardInvocation:, if YES, we should call original method
     if (objectOverridesSelector(self, @selector(forwardInvocation:))) {
         return [self wx_forwardingTargetForSelector: selector];
@@ -89,7 +89,7 @@ static BOOL __addMethod(Class cls, SEL sel) {
         [[WXUnrecognizedSelectorStubObject shareInstance] addFunc: selector];
         return [WXUnrecognizedSelectorStubObject shareInstance];
     }
-//#endif
+#endif
 }
 
 + (id)forwardingTargetForSelector: (SEL)selector {

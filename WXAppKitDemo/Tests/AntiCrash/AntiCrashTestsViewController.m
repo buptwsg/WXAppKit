@@ -41,7 +41,6 @@ static TestCase TestCases[] = {
     {"Class override forwarding target", testClassOverrideForwardingTarget}
 };
 
-
 @interface AntiCrashTestsViewController ()
 
 @end
@@ -53,28 +52,21 @@ static TestCase TestCases[] = {
     if (self) {
         self.casesArray = TestCases;
         self.numberOfCases = sizeof(TestCases) / sizeof(TestCase);
+        [self testKVO];
     }
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)testKVO {
+    UIView *testView = [[UIView alloc] initWithFrame: CGRectMake(0, 0, 100, 100)];
+    testView.backgroundColor = [UIColor redColor];
+    testView.center = self.view.center;
+    [self.view addSubview: testView];
+    
+    [testView addObserver: self forKeyPath: @"frame" options: NSKeyValueObservingOptionInitial context: NULL];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"AntiCrashTestsViewController, observeValueForKeyPath");
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
