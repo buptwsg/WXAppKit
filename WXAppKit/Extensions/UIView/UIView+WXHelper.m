@@ -173,4 +173,16 @@
     return nil;
 }
 
++ (nullable instancetype)instantiateFromNib {
+    NSBundle *bundle = [NSBundle bundleForClass: self];
+    UINib* nib = [UINib nibWithNibName: NSStringFromClass(self) bundle: bundle];
+    NSArray * views = [nib instantiateWithOwner: nil options: nil];
+    for (UIView * view in views) {
+        if ([view isKindOfClass: self]) {
+            return view;
+        }
+    }
+    return nil;
+}
+
 @end

@@ -107,6 +107,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable UIView*)subviewWithTag: (NSInteger)tag;
 
+/**
+ Instantiate a view from nib.
+ */
++ (nullable instancetype)instantiateFromNib;
+
 @end
 
 NS_ASSUME_NONNULL_END
