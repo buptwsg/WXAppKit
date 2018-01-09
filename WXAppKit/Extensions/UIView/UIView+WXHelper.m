@@ -10,6 +10,18 @@
 
 @implementation UIView (WXHelper)
 
++ (nullable instancetype)instantiateFromNib {
+    NSBundle *bundle = [NSBundle bundleForClass: self];
+    UINib* nib = [UINib nibWithNibName: NSStringFromClass(self) bundle: bundle];
+    NSArray * views = [nib instantiateWithOwner: nil options: nil];
+    for (UIView * view in views) {
+        if ([view isKindOfClass: self]) {
+            return view;
+        }
+    }
+    return nil;
+}
+
 - (CGFloat)left {
     return CGRectGetMinX(self.frame);
 }
@@ -164,7 +176,7 @@
     return nil;
 }
 
-- (nullable UIView*)subviewWithTag:(NSInteger)tag {
+- (nullable UIView*)wx_subviewWithTag:(NSInteger)tag {
     for (UIView *subview in self.subviews) {
         if (subview.tag == tag) {
             return subview;
@@ -173,16 +185,29 @@
     return nil;
 }
 
-+ (nullable instancetype)instantiateFromNib {
-    NSBundle *bundle = [NSBundle bundleForClass: self];
-    UINib* nib = [UINib nibWithNibName: NSStringFromClass(self) bundle: bundle];
-    NSArray * views = [nib instantiateWithOwner: nil options: nil];
-    for (UIView * view in views) {
-        if ([view isKindOfClass: self]) {
-            return view;
-        }
+static void wx_printFunction(UIView *view, int level) {
+    NSArray *subviews = view.subviews;
+    if (subviews.count == 0) {
+        return;
     }
-    return nil;
+    
+    for (UIView *subview in subviews) {
+        // 根据层级决定前面空格个数，来缩进显示
+        
+        NSMutableString *blank = [NSMutableString string];
+        for (int i = 1; i < level; i++) {
+            [blank appendString: @"  "];
+        }
+        
+        // 打印子视图类名
+        NSLog(@"%@%d: %@", blank, level, subview.class);
+        
+        // 递归获取此视图的子视图
+        wx_printFunction(subview, level + 1);
+    }
 }
 
+- (void)wx_prettyPrintSubviewHierarchy {
+    wx_printFunction(self, 1);
+}
 @end

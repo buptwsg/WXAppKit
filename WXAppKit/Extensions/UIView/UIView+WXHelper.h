@@ -13,6 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (WXHelper)
 
 /**
+ Instantiate a view from nib.
+ */
++ (nullable instancetype)instantiateFromNib;
+
+/**
  Shortcut for frame.origin.x
  @Warning "wx_" prefix is not added
  */
@@ -105,14 +110,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Different from viewWithTag:, this method will only search view with tag from subviews
  */
-- (nullable UIView*)subviewWithTag: (NSInteger)tag;
+- (nullable UIView*)wx_subviewWithTag: (NSInteger)tag;
 
-/**
- Instantiate a view from nib.
- */
-+ (nullable instancetype)instantiateFromNib;
+- (void)wx_prettyPrintSubviewHierarchy;
 
 @end
 
 NS_ASSUME_NONNULL_END
-

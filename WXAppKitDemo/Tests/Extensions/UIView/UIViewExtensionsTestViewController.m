@@ -250,6 +250,16 @@ static void testFillWithEdges(UIView *rootView) {
     } completion: nil];
 }
 
+static void testPrettyPrintSubviewHierarchy(UIView *rootView) {
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"请查看控制台输出";
+    [label sizeToFit];
+    label.center = rootView.center;
+    [rootView addSubview: label];
+    
+    [[[UIApplication sharedApplication] keyWindow] wx_prettyPrintSubviewHierarchy];
+}
+
 static TestCase cases[] = {
     {"Test frame shortcut reader", testFrameShortcut},
     {"Test frame set left and top", testFrameSetLeftAndTop},
@@ -264,7 +274,8 @@ static TestCase cases[] = {
     {"Test isPortrait", testIsPortrait},
     {"Test snap corner and center", testSnapCornerAndCenter},
     {"Test flexible width and height", testFlexibleWH},
-    {"Test fill with edges", testFillWithEdges}
+    {"Test fill with edges", testFillWithEdges},
+    {"Test pretty print subview hierarchy", testPrettyPrintSubviewHierarchy}
 };
 
 @interface UIViewExtensionsTestViewController ()
