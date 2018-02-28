@@ -73,6 +73,8 @@
 		C6A14BB71FB2E1E50052559E /* NSObject+WXToDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A14BB51FB2E1E50052559E /* NSObject+WXToDictionary.m */; };
 		C6A8E8A11FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.h in Headers */ = {isa = PBXBuildFile; fileRef = C6A8E89F1FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.h */; };
 		C6A8E8A21FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A8E8A01FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.m */; };
+		C6BCFA2320464A5E00367293 /* UITextView+VisualDebugger.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BCFA2120464A5E00367293 /* UITextView+VisualDebugger.h */; };
+		C6BCFA2420464A5E00367293 /* UITextView+VisualDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = C6BCFA2220464A5E00367293 /* UITextView+VisualDebugger.m */; };
 		C6DB4D1B1FF26ADA00A3E112 /* CALayer+WXBorderUIColor.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DB4D191FF26ADA00A3E112 /* CALayer+WXBorderUIColor.h */; };
 		C6DB4D1C1FF26ADA00A3E112 /* CALayer+WXBorderUIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DB4D1A1FF26ADA00A3E112 /* CALayer+WXBorderUIColor.m */; };
 /* End PBXBuildFile section */
@@ -187,6 +189,8 @@
 		C6A14BB51FB2E1E50052559E /* NSObject+WXToDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXToDictionary.m"; sourceTree = "<group>"; };
 		C6A8E89F1FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WXUnrecognizedSelector.h"; sourceTree = "<group>"; };
 		C6A8E8A01FD2A89700F725B6 /* NSObject+WXUnrecognizedSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WXUnrecognizedSelector.m"; sourceTree = "<group>"; };
+		C6BCFA2120464A5E00367293 /* UITextView+VisualDebugger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+VisualDebugger.h"; sourceTree = "<group>"; };
+		C6BCFA2220464A5E00367293 /* UITextView+VisualDebugger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+VisualDebugger.m"; sourceTree = "<group>"; };
 		C6DB4D191FF26ADA00A3E112 /* CALayer+WXBorderUIColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+WXBorderUIColor.h"; sourceTree = "<group>"; };
 		C6DB4D1A1FF26ADA00A3E112 /* CALayer+WXBorderUIColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+WXBorderUIColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -429,6 +433,7 @@
 		C62352C91F94CD9D00E608AC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C6BCFA2020464A4A00367293 /* UITextView */,
 				C6DB4D141FF26A9100A3E112 /* CALayer */,
 				B23F7CFE1FC136A60010059A /* UINavigationBar */,
 				C6A14B7A1FB06EAC0052559E /* NSObject */,
@@ -590,6 +595,15 @@
 			path = NSObject;
 			sourceTree = "<group>";
 		};
+		C6BCFA2020464A4A00367293 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				C6BCFA2120464A5E00367293 /* UITextView+VisualDebugger.h */,
+				C6BCFA2220464A5E00367293 /* UITextView+VisualDebugger.m */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
 		C6DB4D141FF26A9100A3E112 /* CALayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +631,7 @@
 				C62352C01F94CD5600E608AC /* WXAppKit.h in Headers */,
 				B24B9C151F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.h in Headers */,
 				C6A14B7D1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.h in Headers */,
+				C6BCFA2320464A5E00367293 /* UITextView+VisualDebugger.h in Headers */,
 				B2942CDA1FD3C8AF005B5160 /* NSObject+WXAntiKVOCrash.h in Headers */,
 				C630590F1F97050E00D3B9E1 /* UIDevice+WXDeviceHelper.h in Headers */,
 				B23F7D011FC136E80010059A /* UINavigationBar+WXNavigationBarExt.h in Headers */,
@@ -778,6 +793,7 @@
 				C63059331F97467A00D3B9E1 /* UIColor+WXHex.m in Sources */,
 				C6A14B7E1FB06ECA0052559E /* NSObject+WXAutoSecureCoding.m in Sources */,
 				B2942CDF1FD3C9D0005B5160 /* UIView+WXBackgroundDetector.m in Sources */,
+				C6BCFA2420464A5E00367293 /* UITextView+VisualDebugger.m in Sources */,
 				B249743C1F9C1D56009951B7 /* WXPageControl.m in Sources */,
 				C666CC7F1F9DBCFA00DC8243 /* WXMiddleButtonTabBarController.m in Sources */,
 				B24B9C161F96C91400C2DAD0 /* NSArray+WXLogUnicodeSupport.m in Sources */,
