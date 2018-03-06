@@ -7,6 +7,7 @@
 //
 
 #import "WXNavigationController.h"
+#import "WXNavigationBar.h"
 
 @interface WXNavigationController ()
 
@@ -25,7 +26,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    WXNavigationBar *navigationBar = [[WXNavigationBar alloc] initWithFrame: CGRectZero];
+    navigationBar.borderMarginForBarItem = 8;
+    [self setValue: navigationBar forKey: @"navigationBar"];
 }
 
 - (void)didReceiveMemoryWarning {
