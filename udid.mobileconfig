@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plist version="1.0">
+  <dict>
+    <key>PayloadContent</key>
+    <dict>
+      <key>URL</key>
+      <string>https://baidu</string>
+      <key>DeviceAttributes</key>
+      <array>
+        <string>DEVICE_NAME</string>
+        <string>UDID</string>
+        <string>IMEI</string>
+        <string>ICCID</string>
+        <string>VERSION</string>
+        <string>PRODUCT</string>
+        <string>SERIAL</string>
+      </array>
+    </dict>
+    <key>PayloadOrganization</key>
+    <string>王书光</string>
+    <key>PayloadDisplayName</key>
+    <string>技术专家</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadUUID</key>
+    <string>099bcd3d-22ce-45c2-aa97-71e8b8a05cdd</string>
+    <key>PayloadIdentifier</key>
+    <string>com.leafriany.profile-service</string>
+    <key>PayloadDescription</key>
+    <string>描述信息巴拉巴拉。。。。。</string>
+    <key>PayloadType</key>
+    <string>Profile Service</string>
+  </dict>
+</plist>
